@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="img/flaticon.png">
+    <title>Admin 2</title>
+    <!-- boostrap 4.3 -->
+    <link rel="stylesheet" href="vendor/bootstrap-4.3.1/css/bootstrap.min.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="vendor/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!-- chartjs -->
+    <link rel="stylesheet" href="vendor/chartjs/Chart.min.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+    <div class="wraper">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <img class="mx-2" src="img/logo.svg" alt="logo" height="30">
+                <h5>zona perang</h5>
+            </div>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html"><i class="fa fa-dashboard"></i> <span>Dasboard</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link act" href="profile.html"><i class="fa fa-user-o"></i> <span>Account Settings</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="table.html"><i class="fa fa-table"></i> <span>Table List</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="font.html"><i class="fa fa-font"></i> <span>Typography</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="icon.html"><i class="fa fa-smile-o"></i> <span>Icon</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="maps.html"><i class="fa fa-map-o"></i> <span>Maps</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="notifications.html"><i class="fa fa-bell-o"></i> <span>Notifications</span></a>
+                </li>
+            </ul>
+        </nav>
+        <div class="content">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <h6>Account Settings</h6>
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item">
+                            <div class="mb-0  form-search">
+                                <input type="text" class="form-control" placeholder="Search">
+                                <span class="icon-search" id="basic-addon2"><i class="fa fa-search"></i></span>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a href="dasboard.html" class="nav-link"><i class="fa fa-dashboard"></i></a></li>
+                        <li class="nav-item"><a href="dasboard.html" class="nav-link"><i class="fa fa-bell-o"></i></a></li>
+                        <li class="nav-item"><a href="dasboard.html" class="nav-link"><i class="fa fa-user-o"></i></a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="main">
+                <div class="card">
+                    <div class="card-header">Your Profile</div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-12 text-center pt-2">
+                                <img src="img/profile.svg" alt="profile image" class="rounded-circle" height="100">
+                                <div class="d-flex justify-content-center mt-2">
+                                    <button class="btn btn-light btn-sm mx-1"><i class="fa fa-refresh"></i></button>
+                                    <button class="btn btn-light btn-sm mx-1"><span class="fa fa-close"></span></button>
+                                </div>
+                            </div>
+                            <div class="col-md-9 col-sm-12">
+                                <h6>General Info</h6>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="firstname">Firsname</label>
+                                            <input type="text" class="form-control" id="firstname" name="firstname" value="Ridwan">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="lastname">Lastname</label>
+                                            <input type="text" class="form-control" id="lastname" name="lastname" value="Pamungkas">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" class="form-control" id="email" name="email" value="ridwan.pamungks@gmail.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="address">Address</label>
+                                    <textarea name="address" id="address" cols="30" rows="10" class="form-control"></textarea>
+                                </div>
+
+                                <!-- <button class="btn btn-danger btn-sm">Change Password</button> -->
+                                <button class="btn btn-success btn-sm float-right"><i class="fa fa-save"></i> Save</button>
+                                <!--
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="firstname">Firsname</label>
+                                            <input type="text" class="form-control" id="firstname" name="firstname" value="Ridwan">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="lastname">Lastname</label>
+                                            <input type="text" class="form-control" id="lastname" name="lastname" value="Pamungkas">
+                                        </div>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- boostrap script -->
+    <script src="vendor/jquery/jquery-3.3.1.slim.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap-4.3.1/js/bootstrap.min.js"></script>
+    <!-- chartjs -->
+    <script src="vendor/chartjs/Chart.min.js"></script>
+    <script src="js/random.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

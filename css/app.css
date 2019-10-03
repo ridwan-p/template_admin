@@ -1,0 +1,264 @@
+/* barlow-300 - latin */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../vendor/fonts/barlow-v3-latin-300.eot'); /* IE9 Compat Modes */
+  src: local('Barlow Light'), local('Barlow-Light'),
+       url('../vendor/fonts/barlow-v3-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../vendor/fonts/barlow-v3-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../vendor/fonts/barlow-v3-latin-300.woff') format('woff'), /* Modern Browsers */
+       url('../vendor/fonts/barlow-v3-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../vendor/fonts/barlow-v3-latin-300.svg#Barlow') format('svg'); /* Legacy iOS */
+}
+/* barlow-regular - latin */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../vendor/fonts/barlow-v3-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Barlow Regular'), local('Barlow-Regular'),
+       url('../vendor/fonts/barlow-v3-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../vendor/fonts/barlow-v3-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../vendor/fonts/barlow-v3-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../vendor/fonts/barlow-v3-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../vendor/fonts/barlow-v3-latin-regular.svg#Barlow') format('svg'); /* Legacy iOS */
+}
+/* barlow-500 - latin */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../vendor/fonts/barlow-v3-latin-500.eot'); /* IE9 Compat Modes */
+  src: local('Barlow Medium'), local('Barlow-Medium'),
+       url('../vendor/fonts/barlow-v3-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../vendor/fonts/barlow-v3-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../vendor/fonts/barlow-v3-latin-500.woff') format('woff'), /* Modern Browsers */
+       url('../vendor/fonts/barlow-v3-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../vendor/fonts/barlow-v3-latin-500.svg#Barlow') format('svg'); /* Legacy iOS */
+}
+/* Instagram Color Palette */
+:root {
+  --primary-color : #0e68ce;
+  --success-color: #7fdb6a;
+  --info-color: #966842;
+  --warning-color: #eedc31;
+  --danger-color: #f44747;
+  --white-color: #fff;
+  --dark-color:  #666;
+  --font-family: "'Barlow', sans-serif";
+}
+
+.text-primary {
+  color: var(--primary-color) !important;
+}
+.text-info {
+  color: var(--info-color) !important;
+}
+.text-success {
+  color: var(--success-color) !important;
+}
+.text-warning {
+  color: var(--warning-color) !important;
+}
+.text-danger {
+  color: var(--danger-color) !important;
+}
+.text-dark {
+  color: var(--dark-color) !important;
+}
+.text-white {
+  color: var(--white-color) !important;
+}
+
+body {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 400;
+  margin: 0;
+  font-size: 14px;
+  color: var(--dark-color);
+}
+
+.wraper {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  align-items: stretch;
+}
+
+.sidebar {
+  width: 233px;
+  height: 100vh;
+  background-color: #23373c;
+  color: var(--white-color);
+  transition: all 0.3s;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  box-shadow: 5px 0px 5px -5px #999;
+}
+
+.sidebar .sidebar-header {
+  padding: 7px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background-color: var(--success-color);
+  color: var(--white-color);
+}
+
+.sidebar .nav {
+  padding: 20px 0;
+}
+
+.sidebar .nav .nav-item .nav-link {
+  padding: 10px;
+  display: block;
+  padding-left: 30px;
+  color: var(--white-color);
+}
+
+.sidebar .nav .nav-item .nav-link:hover,
+.sidebar .nav .nav-item .nav-link.act {
+  color:  var(--white-color);
+  background-color: var(--success-color);
+}
+
+.sidebar .active {
+  margin-left: -250px;
+}
+
+.content {
+  background-color: #f1f1f1;
+  margin-left: 233px;
+  width: 100%;
+}
+
+.sidebar .sidebar-header,
+.content .navbar {
+  height: 55px;
+  z-index: 99;
+  box-shadow: 0 5px 5px -5px #999;
+}
+
+.content .navbar {
+  background-color: var(--white-color);
+  color: var(--dark-color);
+}
+
+.content .navbar .nav .nav-item .nav-link {
+  color: var(--dark-color);
+}
+
+.content .navbar .nav .nav-item .nav-link:hover {
+  color: var(--success-color);
+}
+
+.content .navbar .form-search {
+  position: relative;
+}
+
+.content .navbar .form-search input {
+  padding-right: 2.3rem;
+}
+
+.content .navbar .form-search .form-control {
+  border-radius: calc((1.5em + .75rem + 2px)/2);
+  width: 277px;
+}
+
+.content .navbar .form-search .icon-search {
+  background-color: var(--white-color);
+  color: var(--dark-color);
+  position: absolute;
+  display: block;
+  pointer-events: none;
+  top: 50%;
+  background: transparent;
+  right: 5%;
+  transform: translate(-50%, -50%);
+}
+
+.content .main {
+  animation: fadeIn 1.5s;
+  margin: .5rem;
+}
+
+.content .main .card {
+  margin-top: 1.5rem;
+}
+
+.chart-wrapper {
+  position: relative;
+  width: 100%;
+  overflow-x: auto;
+}
+.chart-wrapper::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+.chart-wrapper::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+.chart-wrapper .chart-area {
+  width: 480px;
+}
+
+.chart-title {
+  margin-top: 1rem;
+}
+
+/* maps */
+.data-province {
+  position: absolute;
+  height: 3rem;
+  width: 13rem;
+  top: 1rem;
+  right: 1rem;
+  background-color: var(--white-color);
+  border-radius: .3rem;
+  box-shadow: 0px 0px 5px 0px #999;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.maps {
+  /* background-color: var(--success-color); */
+  width: 100%;
+  /* height:"433px" */
+}
+
+.maps .province {
+  fill: var(--success-color);
+  stroke: var(--white--color);
+}
+
+.maps .province:hover {
+  fill: #23373c;
+}
+/* end maps */
+
+
+/* media query */
+@media (max-width: 768px) {
+    .sidebar {
+        margin-left: -233px;
+        box-shadow: none;
+    }
+    .sidebar.active {
+        margin-left: 0;
+    }
+    .content {
+      margin-left: 0;
+    }
+}
+
+/* animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

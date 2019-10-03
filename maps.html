@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="img/flaticon.png">
+    <title>Admin 2</title>
+    <!-- boostrap 4.3 -->
+    <link rel="stylesheet" href="vendor/bootstrap-4.3.1/css/bootstrap.min.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="vendor/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!-- chartjs -->
+    <link rel="stylesheet" href="vendor/chartjs/Chart.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <!-- leaflet js maps -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css' rel='stylesheet' />
+</head>
+
+<body>
+    <div class="wraper">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <img class="mx-2" src="img/logo.svg" alt="logo" height="30">
+                <h5>zona perang</h5>
+            </div>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html"><i class="fa fa-dashboard"></i> <span>Dasboard</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="profile.html"><i class="fa fa-user-o"></i> <span>Account Settings</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="table.html"><i class="fa fa-table"></i> <span>Table List</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="font.html"><i class="fa fa-font"></i> <span>Typography</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="icon.html"><i class="fa fa-smile-o"></i> <span>Icon</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link act" href="maps.html"><i class="fa fa-map-o"></i> <span>Maps</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="notifications.html"><i class="fa fa-bell-o"></i> <span>Notifications</span></a>
+                </li>
+            </ul>
+        </nav>
+        <div class="content">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <h6>Maps</h6>
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item">
+                            <div class="mb-0  form-search">
+                                <input type="text" class="form-control" placeholder="Search">
+                                <span class="icon-search" id="basic-addon2"><i class="fa fa-search"></i></span>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a href="dasboard.html" class="nav-link"><i class="fa fa-dashboard"></i></a></li>
+                        <li class="nav-item"><a href="dasboard.html" class="nav-link"><i class="fa fa-bell-o"></i></a></li>
+                        <li class="nav-item"><a href="dasboard.html" class="nav-link"><i class="fa fa-user-o"></i></a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="main">
+                <div class="card">
+                    <div class="card-header">Indonesia Maps</div>
+                    <div class="card-body position-relative">
+                        <div class="data-province">
+                            Indonesia Maps
+                        </div>
+                        <!-- maps -->
+                        <svg xmlns:namespace="http://www.highcharts.com/svg/namespace" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" id="svg44"  version="1.1" class="maps" viewBox="0 0 700 233">
+                            <g transform="translate(0.25449235,0.21071498)" id="admin1">
+    
+                                <path d="m 32.1,58 0.8,-0.3 1.2,0.7 0.1,2.2 z M 1,3.3 2.1,2.9 2.7,3.7 2.1,4.7 Z m 12.3,46.6 1.7,0.5 2.4,2.3 1.2,0.5 0.9,1.3 1,-0.3 0.7,1.9 -2.3,0.2 -0.1,-0.5 -4.1,-2.7 -2.1,-0.2 -3.7,-2.6 1.1,-1 0.3,-1.6 1.8,0.5 z m 32.6,7.9 -2.2,-1.2 -1.2,0.4 -2,-0.4 -1.4,-1.9 -0.4,-3.9 -0.8,-3 -2.7,-0.8 -1.5,-1.5 -1,-2.7 -1.4,-0.5 -2.6,-4.1 -2.1,-2.3 -1.9,-0.9 -3.1,0.1 -2,-1.1 -3.8,-4.5 -1,-0.1 L 13,28.1 6.8,22.1 6,22 3.8,19.2 1.6,13.6 0.1,12.1 0.9,10.5 0,8.3 3.3,6.6 4.8,7.3 6.3,6.9 l 4.3,1.6 0.7,1.5 3,2 3.6,0.7 h 4.4 l 2.7,-1 h 2.2 l 4.5,1.7 3.4,-1.5 2.6,2.6 3.8,2.6 1.6,3.9 -0.1,1.3 1,-0.2 2.2,0.8 1.1,1.1 -0.1,2 H 46 l -1.8,0.9 -0.8,3.9 -3.2,3.7 2,4.6 1.3,1.5 -1.8,1.2 1.1,1.7 -0.5,0.9 0.5,2.6 2.1,1.4 0.2,2 -0.6,1.6 1.7,3.6 z" id="ID.AC" class="province" onmouseenter="showDetailsMap()" onmouseout="outMouseDetailsMap()">
+                                    <namespace:desc>
+                                        <namespace:labelrank>6</namespace:labelrank>
+                                        <namespace:hasc>ID.AC</namespace:hasc>
+                                        <namespace:alt-name>Achin|Atjeh|Nanggroe Aceh Darussalam</namespace:alt-name>
+                                        <namespace:woe-id>2345710</namespace:woe-id>
+                                        <namespace:subregion>NULL</namespace:subregion>
+                                        <namespace:fips>ID01</namespace:fips>
+                                        <namespace:postal-code>AC</namespace:postal-code>
+                                        <namespace:name>Aceh</namespace:name>
+                                        <namespace:country>Indonesia</namespace:country>
+                                        <namespace:type-en>Autonomous Province</namespace:type-en>
+                                        <namespace:region>NULL</namespace:region>
+                                        <namespace:longitude>96.9956</namespace:longitude>
+                                        <namespace:woe-name>Aceh</namespace:woe-name>
+                                        <namespace:latitude>4.41533</namespace:latitude>
+                                        <namespace:woe-label>Aceh, ID, Indonesia</namespace:woe-label>
+                                        <namespace:type>Propinsi</namespace:type>
+                                        <namespace:hc-middle-x>0.60</namespace:hc-middle-x>
+                                        <namespace:hc-middle-y>0.36</namespace:hc-middle-y>
+                                        <namespace:hc-key>id-ac</namespace:hc-key>
+                                        <namespace:hc-a2>AC</namespace:hc-a2>
+                                    </namespace:desc>
+                                </path>
+                                <path d="m 334.3,27.9 -1.3,-0.8 -0.5,-1.6 h 2 z m 3.3,-3.3 -1.6,-1 -0.1,-0.6 h 0.9 z m -5.7,-0.2 -0.1,0.7 -3.6,-0.6 0.1,-1.2 1.9,0.3 z m 2.5,-7.3 -1.7,-1 0.9,-1.3 1.4,0.9 z m 2.8,-2.6 0.5,1.4 -1.4,0.3 -2.1,-1.6 z m -52.1,42.7 2.7,-1.1 1.6,0.9 2.3,-3.9 -0.1,-1.8 2.3,-1.3 0.1,-1.8 -1,-0.1 -0.5,-1.7 0.3,-1.4 2.1,-0.8 2.9,-2.9 1.1,-0.5 -0.7,-1.1 -1.6,-0.2 v -3.2 l 2.4,-3.3 1,0.8 2.3,-0.8 0.6,-1.9 -0.5,-0.7 0.4,-2.2 1.1,-1.3 -0.9,-2.4 0.4,-3.7 -0.7,-0.5 1.1,-2.2 0.2,-1.9 2.4,-1.8 0.3,-1.6 2.7,1.6 1.5,-1.6 2.7,-0.3 1.2,1.3 1.5,-0.6 0.5,-1 0.7,0.9 2,-0.7 1.4,0.5 5.3,-0.4 0.7,-0.3 3.4,2.3 1.9,0.2 -0.8,0.6 -2,-0.5 0.4,1 1.8,0.6 2.6,1.7 -0.9,0.4 3,0.7 -1.3,1.4 1.4,0.6 -1.1,1 -3,-0.2 -1.2,-1.8 0.9,2.4 -6.4,0.1 1.9,0.5 0.3,1.4 1.5,0.9 1.8,-0.1 -1.1,2 -0.1,1.8 1.5,0.1 0.5,1 2,0.1 -0.7,1.5 1.8,0.1 -2.1,0.8 2.9,0.2 -1.5,1.4 2.3,0.7 0.7,2.1 2.4,2 1.8,2.9 -2.1,1.5 -0.5,1.7 -2.4,0.2 2,0.7 v 1.6 l 0.9,0.9 1.9,0.4 1.2,1.8 4.6,2.3 -0.4,0.5 3.3,1.3 1.8,1.3 2,2.8 2.2,0.2 v 1.1 l -2.9,2.5 -1.7,-0.6 -1.7,0.8 -2.1,-0.5 -0.6,0.6 -1,-0.8 -1.9,-0.1 -1.8,-0.7 -1.3,-2.1 -1.3,0.1 2.1,3.1 -0.5,1 -1.2,-0.7 -1.5,0.5 -1.2,1.5 v 0.9 l -1.4,2.3 -1.9,5.9 1,2 -0.6,0.9 -0.7,2.6 0.9,1.7 -0.6,2.1 2.2,-1.6 0.2,1.4 -0.8,2.6 1.2,1.3 -3.4,0.9 -0.6,1 -0.9,-1.3 -0.4,1.5 -1.2,1.1 -1.9,3.3 -3,1 -0.5,-1.4 -1.1,-0.5 1.2,1.7 -0.3,1.8 -2.2,0.9 -1,1 0.3,1.8 -3.3,1.6 -1.5,1.3 2.3,-0.5 1.4,2 0.1,1.7 -2.5,2.3 1.2,-0.5 0.6,0.9 1.8,-0.6 1.1,0.3 -0.4,2.5 -2.7,-0.6 -5.1,-0.1 -0.8,-0.2 -1.7,1.3 -1,-2.4 0.2,-2 -1.3,-0.7 -0.2,-3.1 -1.8,-3.7 -0.9,-0.1 1.5,-1.4 h 0.6 l 1.1,-2 -0.1,-3.1 -1,0.3 -1.7,-1.7 -2.5,-1.2 -0.8,-1.6 -0.6,-2.8 -0.8,-1 -1,-2.9 v -1.3 l 0.8,-3.3 -2.3,0.1 -2.6,2.8 -0.6,-1.2 0.6,-2.3 -1.1,-3.2 0.2,-1.2 1.4,-2.5 -0.3,-1.5 -1.3,-1.4 -3.5,1.1 -1,0.8 -4.2,0.7 -2.9,-0.8 -2.1,0.2 -1,0.7 -2.8,0.8 2,-2.7 0.3,-1.9 -1.3,-0.5 v -1.1 l 4.6,-3.7 z" id="ID.KI" class="province" onmouseenter="showDetailsMap()" onmouseout="outMouseDetailsMap()">
+                                    <namespace:desc>
+                                        <namespace:labelrank>2</namespace:labelrank>
+                                        <namespace:hasc>ID.KI</namespace:hasc>
+                                        <namespace:alt-name>Kaltim</namespace:alt-name>
+                                        <namespace:woe-id>2345723</namespace:woe-id>
+                                        <namespace:subregion>NULL</namespace:subregion>
+                                        <namespace:fips>ID14</namespace:fips>
+                                        <namespace:postal-code>KI</namespace:postal-code>
+                                        <namespace:name>Kalimantan Timur</namespace:name>
+                                        <namespace:country>Indonesia</namespace:country>
+                                        <namespace:type-en>Province</namespace:type-en>
+                                        <namespace:region>NULL</namespace:region>
+                                        <namespace:longitude>116.354</namespace:longitude>
+                                        <namespace:woe-name>Kalimantan Timur</namespace:woe-name>
+                                        <namespace:latitude>1.28915</namespace:latitude>
+                                        <namespace:woe-label>East Kalimantan, ID, Indonesia</namespace:woe-label>
+                                        <namespace:type>Propinsi</namespace:type>
+                                        <namespace:hc-middle-x>0.51</namespace:hc-middle-x>
+                                        <namespace:hc-middle-y>0.47</namespace:hc-middle-y>
+                                        <namespace:hc-key>id-ki</namespace:hc-key>
+                                        <namespace:hc-a2>KI</namespace:hc-a2>
+                                    </namespace:desc>
+                                </path>
+                                <path d="m 215.5,195 0.6,0.7 -3,-0.6 0.4,-0.6 z m 29.3,5.7 -0.2,-0.1 -1.3,-0.2 -0.7,-1.1 -0.4,-3.6 -1.4,-0.7 -2.7,-0.4 -1.2,-3.2 -2.5,2.4 -1.8,-0.4 -1.2,3.1 -5.7,-1.2 -3.4,0.1 -0.8,-0.9 -4,-0.1 -1.2,0.7 -1.9,-0.6 -0.3,-1 -1,0.8 -1,-0.8 0.1,-1 -1.3,-2.7 -1.7,-0.4 0.2,-2.2 1.7,-0.4 1.3,-1.3 0.1,-1.8 1.3,-1.9 1.3,0.4 0.2,-0.8 2.1,0.8 3.1,0.1 2.6,-0.7 2.8,0.2 2.6,0.7 4.3,-0.7 2.4,1.1 1.7,-0.5 1.3,-1.7 1,-2.2 0.2,-2.8 0.8,-0.6 2.8,-1 1.9,0.7 1.2,2.8 0.6,0.5 3.9,-0.1 0.9,-1.1 1.7,0.5 1,0.9 -0.6,1 -0.3,2.4 0.3,2.8 -2.3,2.4 -3.3,-0.6 -0.3,0.8 v 3.2 l 0.6,1.2 -0.3,1.4 1.7,1.1 -0.2,2.2 -2.6,1.2 -1.9,1.7 z" id="ID.JT" class="province" onmouseenter="showDetailsMap()" onmouseout="outMouseDetailsMap()">
+                                    <namespace:desc>
+                                        <namespace:labelrank>2</namespace:labelrank>
+                                        <namespace:hasc>ID.JT</namespace:hasc>
+                                        <namespace:alt-name>Jateng</namespace:alt-name>
+                                        <namespace:woe-id>2345716</namespace:woe-id>
+                                        <namespace:subregion>NULL</namespace:subregion>
+                                        <namespace:fips>ID07</namespace:fips>
+                                        <namespace:postal-code>JT</namespace:postal-code>
+                                        <namespace:name>Jawa Tengah</namespace:name>
+                                        <namespace:country>Indonesia</namespace:country>
+                                        <namespace:type-en>Province</namespace:type-en>
+                                        <namespace:region>NULL</namespace:region>
+                                        <namespace:longitude>109.896</namespace:longitude>
+                                        <namespace:woe-name>Jawa Tengah</namespace:woe-name>
+                                        <namespace:latitude>-7.2901</namespace:latitude>
+                                        <namespace:woe-label>Central Java, ID, Indonesia</namespace:woe-label>
+                                        <namespace:type>Propinsi</namespace:type>
+                                        <namespace:hc-middle-x>0.36</namespace:hc-middle-x>
+                                        <namespace:hc-middle-y>0.56</namespace:hc-middle-y>
+                                        <namespace:hc-key>id-jt</namespace:hc-key>
+                                        <namespace:hc-a2>JT</namespace:hc-a2>
+                                    </namespace:desc>
+                                </path>
+                                <path d="m 116.8,168.3 -1.3,0.2 -3.1,-1.9 1,-0.9 3.4,1.2 z m -23.1,-43 2,-1.8 2.4,-1.2 1.5,-1 1.2,1 0.9,2.1 2.7,2.6 2.5,1.4 2.6,0.4 2.5,2.4 0.3,1.6 2.9,0.2 0.9,0.9 -0.3,1.5 2.6,1.7 1.9,-1.6 1.7,1.4 1.5,0.2 0.7,1.3 -0.2,1.4 h -1.7 l 0.3,0.8 -2.8,2.6 -1,0.4 2.2,2 3.2,0.9 h 2.4 l 0.9,2.9 6.5,2.2 0.2,1.2 2.4,4.3 -0.4,0.6 -1.8,1.2 -1.5,-0.6 -1.4,0.1 -0.4,-0.8 -3.5,-2.7 -3.8,-1.6 -0.8,-1 -2.7,-2 -6,-3.8 -0.3,-2.1 -1.4,-3 -2.4,-1.2 -6.7,-4 -3.6,-4.6 -1.5,-2.7 -3.5,-2.1 z" id="ID.BE" class="province" onmouseenter="showDetailsMap()" onmouseout="outMouseDetailsMap()">
+                                    <namespace:desc>
+                                        <namespace:labelrank>7</namespace:labelrank>
+                                        <namespace:hasc>ID.BE</namespace:hasc>
+                                        <namespace:alt-name>Bencoolen|Benkoelen|Benkulen</namespace:alt-name>
+                                        <namespace:woe-id>2345712</namespace:woe-id>
+                                        <namespace:subregion>NULL</namespace:subregion>
+                                        <namespace:fips>ID03</namespace:fips>
+                                        <namespace:postal-code>BE</namespace:postal-code>
+                                        <namespace:name>Bengkulu</namespace:name>
+                                        <namespace:country>Indonesia</namespace:country>
+                                        <namespace:type-en>Province</namespace:type-en>
+                                        <namespace:region>NULL</namespace:region>
+                                        <namespace:longitude>102.368</namespace:longitude>
+                                        <namespace:woe-name>Bengkulu</namespace:woe-name>
+                                        <namespace:latitude>-3.48606</namespace:latitude>
+                                        <namespace:woe-label>Bengkulu, ID, Indonesia</namespace:woe-label>
+                                        <namespace:type>Propinsi</namespace:type>
+                                        <namespace:hc-middle-x>0.34</namespace:hc-middle-x>
+                                        <namespace:hc-middle-y>0.27</namespace:hc-middle-y>
+                                        <namespace:hc-key>id-be</namespace:hc-key>
+                                        <namespace:hc-a2>BE</namespace:hc-a2>
+                                    </namespace:desc>
+                                </path>
+                                <path d="m 160.3,181 v 1.5 l -1,0.7 v -1.8 z m 21.8,-4.7 0.1,1 -1.9,0.3 -2.6,-0.5 -0.5,0.5 -0.1,2.3 0.5,2.5 1.2,1.2 -0.8,0.8 -0.5,2.3 h -1.8 l -3.5,-1.9 -1.4,-0.2 -2.6,0.6 -1.1,-0.1 -3.2,0.7 -2.6,-0.7 -0.8,-0.6 1.4,-1.6 1.5,2 2.4,-3 -0.2,-1.2 0.8,-0.9 0.5,0.9 1,-0.4 0.6,-1.2 -0.1,-3 0.7,-2.4 2.2,-2.9 1.1,1.4 0.8,0.4 1.2,-1.1 3.5,1.1 2.5,-0.6 1,0.7 -0.6,0.7 0.3,1.6 z" id="ID.BT" class="province" onmouseenter="showDetailsMap()" onmouseout="outMouseDetailsMap()">
+                                    <namespace:desc>
+                                        <namespace:labelrank>2</namespace:labelrank>
+                                        <namespace:hasc>ID.BT</namespace:hasc>
+                                        <namespace:alt-name>NULL</namespace:alt-name>
+                                        <namespace:woe-id>28350158</namespace:woe-id>
+                                        <namespace:subregion>NULL</namespace:subregion>
+                                        <namespace:fips>ID33</namespace:fips>
+                                        <namespace:postal-code>BT</namespace:postal-code>
+                                        <namespace:name>Banten</namespace:name>
+                                        <namespace:country>Indonesia</namespace:country>
+                                        <namespace:type-en>Province</namespace:type-en>
+                                        <namespace:region>NULL</namespace:region>
+                                        <namespace:longitude>106.167</namespace:longitude>
+                                        <namespace:woe-name>Banten</namespace:woe-name>
+                                        <namespace:latitude>-6.25794</namespace:latitude>
+                                        <namespace:woe-label>Banten, ID, Indonesia</namespace:woe-label>
+                                        <namespace:type>Propinsi</namespace:type>
+                                        <namespace:hc-middle-x>0.59</namespace:hc-middle-x>
+                                        <namespace:hc-middle-y>0.46</namespace:hc-middle-y>
+                                        <namespace:hc-key>id-bt</namespace:hc-key>
+                                        <namespace:hc-a2>BT</namespace:hc-a2>
+                                    </namespace:desc>
+                                </path>
+                                <path d="m 210.4,105.2 -0.4,1 -1.5,0.4 -0.4,-1.4 1.3,-0.5 z m 9,-9.2 2.3,0.7 0.4,1.4 -4.3,2.7 -1,-0.6 0.3,-3.7 z m 21.3,26.8 -2.3,1 -1.9,2.1 -0.8,-2.5 -1.6,-0.4 -3.5,2.1 -0.9,-1.6 0.5,-1.6 -0.6,-1.9 -0.8,-0.4 0.8,-1.4 -0.9,-1.3 -0.4,-2.2 -0.8,-1.3 0.4,-1.9 -0.9,-2.1 -2.6,-1.2 1.8,-2.8 0.3,-3.1 -0.7,-2.1 -1.5,-0.9 -0.2,-1.7 -1.3,-0.2 -1.6,-1.8 -0.8,0.4 -2.8,-1.7 -1.2,0.9 -2,-0.7 -0.3,-2.7 3.1,0.8 -2,-2.1 -1.2,0.2 -2.1,-1.3 -0.4,-2 -0.9,-1.6 1,-0.7 1.6,0.4 -0.6,-0.8 -0.5,-3.1 2,0.2 -2,-1.4 -1.1,-1.8 -2.7,-1.3 0.3,-1.6 -0.6,-1.2 0.2,-1.6 -1.2,-2.7 1.2,-0.9 0.5,-1.6 -0.9,-2.6 0.8,-0.6 1,-2.6 0.4,-2.6 2.2,-1.7 1.3,-2.1 -0.2,-1.8 3.2,-1 0.9,-0.6 -1.3,2.1 0.3,1.1 1.4,0.4 0.1,2.1 0.6,0.9 2.5,2.4 1.4,0.3 0.7,1.3 1.8,1.3 1.1,0.2 1.5,2.5 1.3,0.1 1.1,1 2,0.8 3.3,-1 1,-1.4 5,-1.4 2.3,0.8 2.8,0.1 1.6,-0.6 2.5,0.2 1.2,-1.6 2.8,-0.7 1,-3.2 -0.1,-1.2 4.2,-1.9 h 4.4 l 1.2,-0.5 2.5,0.5 -0.8,1.8 1.9,-0.3 3.5,1 1.1,0.8 1.5,-0.4 2.3,1 2.2,-1.6 1.4,-1.6 2.1,-0.4 2.3,0.2 -0.1,3.3 -4.6,3.7 v 1.1 l 1.3,0.5 -0.3,1.9 -2,2.7 -1.8,2.3 -0.2,1.4 -1.3,0.8 -1.7,-0.1 -1.4,0.5 2.1,2.5 0.4,1.7 -0.6,2.1 -1.5,0.9 -1,1.7 0.8,0.9 -0.6,1.9 -1.4,-1.1 -2.3,0.8 -6.1,3 -2.9,0.9 -3.8,-0.1 -6.7,4.5 -0.9,2.5 -2.3,1.4 -1.2,1.5 -2.8,2.5 h -1.8 l -1.2,1.4 1.4,0.6 0.3,1.2 -0.3,3.5 0.3,2.1 2.1,3.9 0.2,4.8 -1,0.5 z" id="ID.KB" class="province" onmouseenter="showDetailsMap()" onmouseout="outMouseDetailsMap()">
+                                    <namespace:desc>
+                                        <namespace:labelrank>2</namespace:labelrank>
+                                        <namespace:hasc>ID.KB</namespace:hasc>
+                                        <namespace:alt-name>Kalbar</namespace:alt-name>
+                                        <namespace:woe-id>2345720</namespace:woe-id>
+                                        <namespace:subregion>NULL</namespace:subregion>
+                                        <namespace:fips>ID11</namespace:fips>
+                                        <namespace:postal-code>KB</namespace:postal-code>
+                                        <namespace:name>Kalimantan Barat</namespace:name>
+                                        <namespace:country>Indonesia</namespace:country>
+                                        <namespace:type-en>Province</namespace:type-en>
+                                        <namespace:region>NULL</namespace:region>
+                                        <namespace:longitude>111.304</namespace:longitude>
+                                        <namespace:woe-name>Kalimantan Barat</namespace:woe-name>
+                                        <namespace:latitude>-0.063647</namespace:latitude>
+                                        <namespace:woe-label>West Kalimantan, ID, Indonesia</namespace:woe-label>
+                                        <namespace:type>Propinsi</namespace:type>
+                                        <namespace:hc-middle-x>0.44</namespace:hc-middle-x>
+                                        <namespace:hc-middle-y>0.37</namespace:hc-middle-y>
+                                        <namespace:hc-key>id-kb</namespace:hc-key>
+                                        <namespace:hc-a2>KB</namespace:hc-a2>
+                                    </namespace:desc>
+                                </path>
+                                <path d="m 180.7,128.2 -2.1,-0.8 1.2,-1.1 1.5,0.4 z m 9.2,-2.7 -1.2,1.1 -1.1,-0.9 1.7,-1 z m 2.3,-4.8 2.6,-0.3 2.1,0.2 0.7,1 0.4,-0.7 2,1.1 1.1,1.1 0.4,1.6 -1.1,2.1 0.2,1.9 -1.7,0.4 -0.2,1 -1.2,0.3 -0.5,-1.3 -1.5,-1.4 -0.3,1.4 -3,1.6 -0.6,-0.5 0.6,-1.3 -1,-1.5 0.4,-1.4 -0.4,-1.9 0.7,-0.6 z m -13.8,8.6 -2.8,0.2 -1.1,-1.6 -5.3,-1.8 -1.6,-0.2 -1.4,-2.7 0.5,-2 -1.8,-1.4 -0.7,-3.2 -2.8,-0.7 -0.7,-0.7 -1.6,0.9 -2.1,0.3 -1.2,-0.9 -1.2,0.3 v -2.2 l 3.1,-1.8 0.2,-1.3 -0.7,-1.2 1.6,-1.4 1.9,-0.7 0.6,1.3 1.1,0.6 -0.7,0.8 1,0.9 1.5,0.2 -1,-1.3 -0.6,-2.6 1.7,-0.2 1.1,-0.4 2,1.4 v 1.2 l 2.2,2.9 -0.1,1.8 1.8,5 1.4,1.6 7.2,1.1 -1.4,0.8 -0.9,1.3 -0.7,2.5 v 1.1 l 1.9,0.8 z" id="ID.BB" class="province" onmouseenter="showDetailsMap()" onmouseout="outMouseDetailsMap()">
+                                    <namespace:desc>
+                                        <namespace:labelrank>2</namespace:labelrank>
+                                        <namespace:hasc>ID.BB</namespace:hasc>
+                                        <namespace:alt-name>Babel|Kepulauan Bangka Belitung</namespace:alt-name>
+                                        <namespace:woe-id>28350154</namespace:woe-id>
+                                        <namespace:subregion>NULL</namespace:subregion>
+                                        <namespace:fips>ID35</namespace:fips>
+                                        <namespace:postal-code>BB</namespace:postal-code>
+                                        <namespace:name>Bangka-Belitung</namespace:name>
+                                        <namespace:country>Indonesia</namespace:country>
+                                        <namespace:type-en>Province</namespace:type-en>
+                                        <namespace:region>NULL</namespace:region>
+                                        <namespace:longitude>106.819</namespace:longitude>
+                                        <namespace:woe-name>Bangka-Belitung</namespace:woe-name>
+                                        <namespace:latitude>-2.95817</namespace:latitude>
+                                        <namespace:woe-label>Bangka-Belitung, ID, Indonesia</namespace:woe-label>
+                                        <namespace:type>Propinsi</namespace:type>
+                                        <namespace:hc-middle-x>0.28</namespace:hc-middle-x>
+                                        <namespace:hc-middle-y>0.45</namespace:hc-middle-y>
+                                        <namespace:hc-key>id-bb</namespace:hc-key>
+                                        <namespace:hc-a2>BB</namespace:hc-a2>
+                                    </namespace:desc>
+                                </path>
+                                <path d="m 312.4,203.8 0.8,1.4 -0.5,0.6 -1.8,-1 z m -13.2,-7.2 2.5,0.7 2.3,-0.4 1.6,-1.6 1.2,-0.2 4.2,1.5 3.2,2.8 -1.5,1.9 -4,2 -1.5,1.6 0.4,1.3 -1.5,0.5 -0.6,-0.4 1.3,-1.5 -0.5,-0.9 -3.4,-2.7 -2,-0.8 h -2.3 l -1.3,-0.8 -1.3,-1.7 -0.3,-1.8 1.3,0.5 z" id="ID.BA" class="province" onmouseenter="showDetailsMap()" onmouseout="outMouseDetailsMap()">
+                                    <namespace:desc>
+                                        <namespace:labelrank>2</namespace:labelrank>
+                                        <namespace:hasc>ID.BA</namespace:hasc>
+                                        <namespace:alt-name>Penida|Lembongan|Ceningan|Menjangan</namespace:alt-name>
+                                        <namespace:woe-id>2345711</namespace:woe-id>
+                                        <namespace:subregion>NULL</namespace:subregion>
+                                        <namespace:fips>ID02</namespace:fips>
+                                        <namespace:postal-code>BA</namespace:postal-code>
+                                        <namespace:name>Bali</namespace:name>
+                                        <namespace:country>Indonesia</namespace:country>
+                                        <namespace:type-en>Province</namespace:type-en>
+                                        <namespace:region>NULL</namespace:region>
+                                        <namespace:longitude>115.179</namespace:longitude>
+                                        <namespace:woe-name>Bali</namespace:woe-name>
+                                        <namespace:latitude>-8.341200000000001</namespace:latitude>
+                                        <namespace:woe-label>Bali, ID, Indonesia</namespace:woe-label>
+                                        <namespace:type>Propinsi</namespace:type>
+                                        <namespace:hc-middle-x>0.57</namespace:hc-middle-x>
+                                        <namespace:hc-middle-y>0.40</namespace:hc-middle-y>
+                                        <namespace:hc-key>id-ba</namespace:hc-key>
+                                        <namespace:hc-a2>BA</namespace:hc-a2>
+                                    </namespace:desc>
+                                </path>
+                                <path d="m 294.2,182.1 v 0.7 l -1.5,-0.4 0.4,-1.4 z m 14.1,-5 2.9,0.9 -0.2,0.5 -2.6,-0.3 -1.2,1.5 -1.2,-1.5 0.8,-1 z m -39.7,-14.1 0.4,1.3 -1.9,0.4 -0.3,-0.8 0.8,-0.9 z m 11.6,16.2 1.2,0.1 6.7,-0.6 2,1.4 -3,1.1 -1.1,1.3 -2.5,-0.2 -1.1,0.7 -0.5,1.2 -5.6,0.1 -0.5,0.2 -4.6,-0.8 h -1.3 l -0.5,-1.8 1.3,-0.8 0.7,-1.1 3.3,-0.6 1.1,0.2 z m -26,-0.9 0.7,0.5 2.4,0.5 1.4,-0.4 1.4,1.5 h 1.8 l 2.5,-0.6 2,0.5 1.5,-0.2 -0.2,1.3 1.2,0.9 -0.8,0.4 1.2,1.3 -1.2,0.3 1.5,0.8 1.2,-0.7 0.6,0.8 -0.1,2.1 -0.6,1.8 1.2,0.9 2.9,0.7 1.4,1 1.6,0.1 0.9,0.7 3.3,-1.5 4,0.1 2,-0.7 1,-0.9 1.9,1.1 1.7,-0.1 1.8,0.7 1.3,1.1 -0.1,2.7 -1.1,5.8 0.4,1.6 0.6,-0.8 0.7,2.2 1.9,0.5 0.2,1.7 -3.4,-0.4 0.2,-1.1 -1.2,-0.7 -1.5,0.5 -2.5,-0.4 -0.7,0.2 -2.5,-1.5 -1.4,0.3 -1.1,-0.9 -3.4,-0.8 -1,-0.9 -2.2,-0.6 -3,0.8 -1.2,1.3 -1,-0.4 -2.3,1.2 -3.4,-0.7 -1.5,-0.8 -6.1,-0.1 -2,-0.5 -1.6,1.7 -0.6,-0.6 h -2.7 l -0.1,-0.6 -2.6,-0.2 -1.3,0.5 -1.2,-1 -0.5,0.7 -1.7,-0.3 0.2,-1.6 1.9,-1.7 2.6,-1.2 0.2,-2.2 -1.7,-1.1 0.3,-1.4 -0.6,-1.2 v -3.2 l 0.3,-0.8 3.3,0.6 2.3,-2.4 -0.3,-2.8 0.3,-2.4 z" id="ID.JI" class="province" onmouseenter="showDetailsMap()" onmouseout="outMouseDetailsMap()">
+                                    <namespace:desc>
+                                        <namespace:labelrank>2</namespace:labelrank>
+                                        <namespace:hasc>ID.JI</namespace:hasc>
+                                        <namespace:alt-name>Jatim</namespace:alt-name>
+                                        <namespace:woe-id>2345717</namespace:woe-id>
+                                        <namespace:subregion>NULL</namespace:subregion>
+                                        <namespace:fips>ID08</namespace:fips>
+                                        <namespace:postal-code>JI</namespace:postal-code>
+                                        <namespace:name>Jawa Timur</namespace:name>
+                                        <namespace:country>Indonesia</namespace:country>
+                                        <namespace:type-en>Province</namespace:type-en>
+                                        <namespace:region>NULL</namespace:region>
+                                        <namespace:longitude>112.616</namespace:longitude>
+                                        <namespace:woe-name>Jawa Timur</namespace:woe-name>
+                                        <namespace:latitude>-7.88129</namespace:latitude>
+                                        <namespace:woe-label>East Java, ID, Indonesia</namespace:woe-label>
+                                        <namespace:type>Propinsi</namespace:type>
+                                        <namespace:hc-middle-x>0.24</namespace:hc-middle-x>
+                                        <namespace:hc-middle-y>0.65</namespace:hc-middle-y>
+                                        <namespace:hc-key>id-ji</namespace:hc-key>
+                                        <namespace:hc-a2>JI</namespace:hc-a2>
+                                    </namespace:desc>
+                                </path>
+                                <path d="m 321,129.6 -1.1,-1.4 1.1,-2.4 0.4,0.5 z m -5.1,-2 0.9,-2.4 2,-1.5 0.1,2.7 0.9,1.3 -0.6,0.3 0.5,2.9 0.2,2.7 -2.6,2 -1.1,-0.1 0.5,-1.4 -0.3,-1.8 -1,-2.2 z m 6.8,-16.7 -0.4,2.2 -3.3,0.3 1.2,0.7 -0.3,1.2 0.2,2.5 -0.5,1.5 -1.3,1.3 -1.5,-2.7 -0.4,2.8 0.7,-0.1 1.6,1.9 -1.4,0.6 -2.1,4.1 -0.5,2.4 -1.9,0.4 -1.1,1 -2.5,1.4 -7.5,3.3 -2.7,1.4 -2.3,1.6 h -1.3 v -2.3 l -0.5,-2.3 v -2.5 l -1.2,-1.7 v -3.1 l -0.7,0.5 -0.1,1.6 -2.6,-0.7 2,-6.4 0.4,-1.8 1.8,-0.9 2.2,-2.1 0.4,-1.9 1.2,-2.1 -0.2,-2.3 3.3,-1 2.8,-2.6 0.3,-2 -0.4,-2 1.1,-4.9 3.7,-1.3 v 1 l -1.5,1.4 0.9,0.1 1.8,3.7 0.2,3.1 1.3,0.7 -0.2,2 1,2.4 1.7,-1.3 0.8,0.2 5.1,0.1 z" id="ID.KS" class="province" onmouseenter="showDetailsMap()" onmouseout="outMouseDetailsMap()">
+                                    <namespace:desc>
+                                        <namespace:labelrank>2</namespace:labelrank>
+                                        <namespace:hasc>ID.KS</namespace:hasc>
+                                        <namespace:alt-name>Kalsel</namespace:alt-name>
+                                        <namespace:woe-id>2345721</namespace:woe-id>
+                                        <namespace:subregion>NULL</namespace:subregion>
+                                        <namespace:fips>ID12</namespace:fips>
+                                        <namespace:postal-code>KS</namespace:postal-code>
+                                        <namespace:name>Kalimantan Selatan</namespace:name>
+                                        <namespace:country>Indonesia</namespace:country>
+                                        <namespace:type-en>Province</namespace:type-en>
+                                        <namespace:region>NULL</namespace:region>
+                                        <namespace:longitude>115.451</namespace:longitude>
+                                        <namespace:woe-name>Kalimantan Selatan</namespace:woe-name>
+                                        <namespace:latitude>-3.00713</namespace:latitude>
+                                        <namespace:woe-label>South Kalimantan, ID, Indonesia</namespace:woe-label>
+                                        <namespace:type>Propinsi</namespace:type>
+                                        <namespace:hc-middle-x>0.45</namespace:hc-middle-x>
+                                        <namespace:hc-middle-y>0.57</namespace:hc-middle-y>
+                                        <namespace:hc-key>id-ks</namespace:hc-key>
+                                        <namespace:hc-a2>KS</namespace:hc-a2>
+                                    </namespace:desc>
+                                </path>
+                                <path d="m 406.1,226.5 0.8,0.1 v 1.2 l -1.9,1.3 -2.5,-0.5 z m 22.2,-3.7 -0.9,0.3 0.3,1.5 -1.1,0.1 -0.3,-1 1.2,-1.7 1.5,0.2 z m -56.1,-21.5 1.6,-0.3 -1.1,0.8 -0.1,1.6 -1.4,-0.5 z m -3.1,-2.5 1.5,0.3 v 1.2 l -0.9,-0.3 -0.9,1.7 0.4,0.9 -1.3,-0.2 -0.1,-2.2 0.5,-1.9 z m 54.4,-2.4 -0.1,0.7 -2.3,0.5 -0.7,1.2 h -1.1 l 1.7,-2 z m 1.7,-2.8 0.6,0.2 -0.1,1.9 -4.1,0.5 -0.1,-1.2 2.2,-1.5 z m 14,1.7 -0.9,2.2 -1.7,0.2 -0.5,-1.6 -1.7,0.4 1.1,-1.7 1.1,-0.5 0.8,1.1 2.1,-3.1 0.8,0.6 -0.1,1.5 z m -19.8,38.2 -0.4,-2.1 3.4,-1.1 1.7,-1.2 0.9,-1.3 2.3,-1.7 -0.2,2.1 0.6,1.6 -0.9,-0.1 -1.5,1 -0.5,1.1 -3.2,0.8 -0.3,0.6 z m -42.2,-12.7 -4.1,-2 -0.4,-0.7 -2.9,-0.7 -1,0.7 -1.8,-0.7 h -1.6 l -2,-0.8 -1.5,-1.5 1.2,-2 2,-0.9 6.7,-0.8 2.9,0.4 1.7,-1.4 1,1 0.9,1.2 2.6,0.9 0.5,2 3,-0.1 1.5,1.3 1.4,2.2 1.8,1.1 0.6,1.9 -1.7,1.7 -2.1,0.4 -1.6,1.3 -0.9,-0.7 -3.5,-0.5 -1.8,-1.6 z m 53.8,-24.4 -0.3,-0.5 -1.6,2.5 -0.7,-0.7 -1.5,1 -1.1,-0.8 -1.4,-0.1 1.9,-1.7 1.6,-0.7 v -0.7 h -1.5 l 0.6,-0.8 2.3,-0.3 -0.7,1.3 0.8,0.6 1,-2.3 1,0.3 1.3,-1 2.1,0.9 -2.4,1 z m 20.9,-4.6 0.8,1 -0.2,1.8 -5.3,1 h -1.8 l -3.4,0.9 -1.3,-0.7 1.1,-1.7 -0.2,-1.2 0.8,-1.1 1.7,-0.3 0.6,1.1 0.9,-0.6 z m -19.4,28.5 -2.5,-0.5 1.1,-1.8 -0.1,-1.7 0.5,-2.5 2.6,-1.9 1.8,-2.1 2,1.1 1.1,-0.8 0.9,1.9 0.8,-0.2 0.5,-1.7 1.2,-1.1 0.3,-1.8 1.7,-0.2 1.8,-1.6 3.4,-1.6 0.4,1.7 2.1,-1.4 1.1,1.1 -0.2,1.9 -2.5,0.1 -0.3,0.8 1,1.4 0.6,2.2 -0.8,0.8 -0.5,1.8 -1.8,1.4 -1.6,2.2 -2.9,2.1 -1.7,2 -4.4,0.2 -1.3,1.5 -1.5,0.3 -1.5,1.1 -1.6,0.1 -2.1,-0.5 -1.6,0.3 0.3,-1.6 0.8,-0.9 3,-1.4 z m -11.9,-28 0.6,2.8 -1.7,0.4 v 1.5 l -1.4,-0.3 0.7,1.6 -0.6,0.9 -3.5,1 -2.3,1.1 H 408 l -1.6,1.1 -3,1.3 -1.6,-0.5 -0.6,0.9 -0.4,-1.1 -3.3,-0.5 -0.8,1.9 -2.6,-0.3 -1.4,0.7 -2.1,-0.1 -1.4,-1.6 -1,0.7 -1.8,-0.2 -0.7,-0.7 -3.1,0.1 -2,0.4 -1.7,-0.7 -2.2,0.7 -0.8,0.9 -1.8,-1.9 -0.1,-2.1 1,-1.5 2.2,-1.7 1.2,0.1 1.5,-1.6 2.4,-0.3 h 3.2 v -0.7 l 2.2,1.3 h 3.4 l 0.8,0.8 3.9,1.2 1.4,1.3 h 1.3 l 0.6,0.4 1.4,-0.9 v -1 l 1,0.5 2.3,-0.6 0.9,0.2 1.6,-1 0.5,1.3 1.5,0.4 2.3,1.3 3.1,-1 -0.2,-1.5 1.5,-1.2 2.4,-0.6 1.8,-1.1 1,-1.3 -1.1,-0.2 -2,0.7 0.7,-1.8 1,-0.6 z" id="ID.NT" class="province" onmouseenter="showDetailsMap()" onmouseout="outMouseDetailsMap()">
+                                    <namespace:desc>
+                                        <namespace:labelrank>2</namespace:labelrank>
+                                        <namespace:hasc>ID.NT</namespace:hasc>
+                                        <namespace:alt-name>NTT</namespace:alt-name>
+                                        <namespace:woe-id>2345727</namespace:woe-id>
+                                        <namespace:subregion>NULL</namespace:subregion>
+                                        <namespace:fips>ID18</namespace:fips>
+                                        <namespace:postal-code>NT</namespace:postal-code>
+                                        <namespace:name>Nusa Tenggara Timur</namespace:name>
+                                        <namespace:country>Indonesia</namespace:country>
+                                        <namespace:type-en>Province</namespace:type-en>
+                                        <namespace:region>NULL</namespace:region>
+                                        <namespace:longitude>120.689</namespace:longitude>
+                                        <namespace:woe-name>Nusa Tenggara Timur</namespace:woe-name>
+                                        <namespace:latitude>-8.584429999999999</namespace:latitude>
+                                        <namespace:woe-label>East Nusa Tenggara, ID, Indonesia</namespace:woe-label>
+                                        <namespace:type>Propinsi</namespace:type>
+                                        <namespace:hc-middle-x>0.32</namespace:hc-middle-x>
+                                        <namespace:hc-middle-y>0.20</namespace:hc-middle-y>
+                                        <namespace:hc-key>id-nt</namespace:hc-key>
+                                        <namespace:hc-a2>NT</namespace:hc-a2>
+                                    </namespace:desc>
+                                </path>
+                                <path d="m 389.1,180.3 2.6,0.1 0.1,0.5 -3.5,-0.1 z m -2,-2.9 0.4,0.8 -1.5,0.4 -0.8,-1.2 v -1 z m 10.3,-61 -1.8,0.8 -3.1,-2 h -1.7 l -1.1,0.6 -0.8,-1.4 0.6,-0.8 -1.1,-1.4 -3.5,-0.5 -2.8,1.1 -0.5,1 -4.9,3.3 1.3,3 1.6,0.7 0.8,6.6 0.4,0.9 -1.3,3 0.1,2.5 0.5,1 -0.2,3.2 0.7,2.8 0.7,0.7 -0.7,3 -1.1,0.7 v 1.8 l -0.5,2.3 1.8,2.7 1.3,4.2 -2.1,-1.6 -3.2,1.4 -2.8,-0.3 -1.5,1.9 -2.3,-0.1 -0.3,-0.9 -0.9,0.6 -0.8,-1.4 -1.2,0.5 v -1 l -1.4,-2.4 0.7,-3.6 0.7,-0.6 0.9,-2.8 -0.6,-1.9 1.4,-2.9 0.3,-3.7 -0.4,-3 0.5,-1.9 -0.7,0.7 -2.3,-4.5 0.7,-2.5 -0.3,-0.8 -1.2,-4.3 3.1,-1.2 -1.5,-3.1 -0.5,-2.2 2.1,-0.1 1.8,-1 -0.8,-1.9 -0.6,-3 -1.3,-0.9 0.3,-1.7 2.6,-2 0.6,-1.4 2.5,-1.5 1.6,-0.1 2.1,0.5 1.6,-1 0.6,0.4 2.8,3.3 2.8,1.9 8.2,1.2 1.5,0.6 5.2,3.9 -0.2,1.9 z m -13.7,45 -0.3,5.3 -0.4,2 -0.7,-4.9 -0.2,-4.3 0.5,-1.2 z" id="ID.SE" class="province" onmouseenter="showDetailsMap()" onmouseout="outMouseDetailsMap()">
+                                    <namespace:desc>
+                                        <namespace:labelrank>2</namespace:labelrank>
+                                        <namespace:hasc>ID.SE</namespace:hasc>
+                                        <namespace:alt-name>Sulsel</namespace:alt-name>
+                                        <namespace:woe-id>2345729</namespace:woe-id>
+                                        <namespace:subregion>NULL</namespace:subregion>
+                                        <namespace:fips>ID38</namespace:fips>
+                                        <namespace:postal-code>SE</namespace:postal-code>
+                                        <namespace:name>Sulawesi Selatan</namespace:name>
+                                        <namespace:country>Indonesia</namespace:country>
+                                        <namespace:type-en>Province</namespace:type-en>
+                                        <namespace:region>NULL</namespace:region>
+                                        <namespace:longitude>119.99</namespace:longitude>
+                                        <namespace:woe-name>Sulawesi Selatan</namespace:woe-name>
+                                        <namespace:latitude>-3.7444</namespace:latitude>
+                                        <namespace:woe-label>South Sulawesi, ID, Indonesia</namespace:woe-label>
+                                        <namespace:type>Propinsi</namespace:type>
+                                        <namespace:hc-middle-x>0.23</namespace:hc-middle-x>
+                                        <namespace:hc-middle-y>0.33</namespace:hc-middle-y>
+                                        <namespace:hc-key>id-se</namespace:hc-key>
+                                        <namespace:hc-a2>SE</namespace:hc-a2>
+                                    </namespace:desc>
+                                </path>
+                                <path d="m 144.3,91.5 0.7,1.2 -1,2 -1.4,-0.5 -0.9,1.3 -0.4,-1.7 -1.2,-0.9 0.9,-1.7 0.9,0.5 1.2,-1.1 z m -1,-9.2 0.5,0.1 2.3,2.1 -0.1,0.5 -2.3,-1.8 z m -4.4,-6.7 -0.7,-0.7 1.2,-0.6 0.4,1.1 z m -12.3,-2 1.5,1.9 -0.1,1.7 -1.3,-0.4 -1.1,-1.5 0.1,-1.6 z m 6.3,1.3 -1.7,-1.1 0.2,-0.7 1.1,0.7 z m 4.9,-2 1.4,0.4 -1.1,0.9 -1.5,-1.2 0.2,-1 z m -4,-1.6 0.9,0.8 -0.8,0.2 -1.1,-1 z m -6.9,0.3 -1.3,0.1 -0.7,-0.8 1.1,-1 z m 10.4,-2.4 -0.3,1.3 -1.1,1 -1.5,-0.3 -0.8,-1.1 2,-1.5 z m 68,-28.5 -1,-0.5 1.1,-1.8 0.6,0.3 z m -45.2,0.3 0.5,1 -1.7,0.4 0.4,-1.4 -0.6,-1.2 z m 6.6,-4 0.7,0.7 0.1,1.3 -1.1,-0.5 z m -19.7,51.7 -2.9,1 -1.4,-0.7 1,-3.2 0.9,-0.3 2.3,1.9 0.5,0.9 1.2,-0.8 1.2,1.3 1.3,0.6 -2.4,0.4 z m -8.5,-18.9 2.4,-1.7 2.9,-0.1 1,1.4 v 2.7 l -0.6,1.2 -1.8,-0.2 -1,-1.4 0.4,-1.6 -2,0.9 -1,-0.1 z m 55.2,-41 2.1,-1.8 -2.7,-0.5 -1.2,-2.2 3.3,-3.6 1.3,2.3 1.3,1.2 0.4,1.8 -1.2,2.9 -2.1,0.5 z" id="ID.KR" class="province" onmouseenter="showDetailsMap()" onmouseout="outMouseDetailsMap()">
+                                    <namespace:desc>
+                                        <namespace:labelrank>2</namespace:labelrank>
+                                        <namespace:hasc>ID.KR</namespace:hasc>
+                                        <namespace:alt-name>Rhio|Riou|Riouw</namespace:alt-name>
+                                        <namespace:woe-id>55949082</namespace:woe-id>
+                                        <namespace:subregion>NULL</namespace:subregion>
+                                        <namespace:fips>ID40</namespace:fips>
+                                        <namespace:postal-code>KR</namespace:postal-code>
+                                        <namespace:name>Kepulauan Riau</namespace:name>
+                                        <namespace:country>Indonesia</namespace:country>
+                                        <namespace:type-en>Province</namespace:type-en>
+                                        <namespace:region>NULL</namespace:region>
+                                        <namespace:longitude>104.601</namespace:longitude>
+                                        <namespace:woe-name>Kepulauan Riau</namespace:woe-name>
+                                        <namespace:latitude>-0.142639</namespace:latitude>
+                                        <namespace:woe-label>Kepulauan Riau, ID, Indonesia</namespace:woe-label>
+                                        <namespace:type>Propinsi</namespace:type>
+                                        <namespace:hc-middle-x>0.87</namespace:hc-middle-x>
+                                        <namespace:hc-middle-y>0.06</namespace:hc-middle-y>
+                                        <namespace:hc-key>id-kr</namespace:hc-key>
+                                        <namespace:hc-a2>KR</namespace:hc-a2>
+                                    </namespace:desc>
+                                </path>
+                                <path d="m 580,129.1 -1.5,0.2 -2.1,-1.1 0.1,-0.9 2.1,1.4 z m 11.9,-33 -0.7,-1.1 0.8,-1.2 0.6,0.4 z m -3,-3.5 -0.5,-1.4 0.9,-1.4 0.3,0.8 z m -66.5,-8.7 -1.5,0.9 -1.8,-0.4 1.7,-1 z m 13.3,-6.9 1.3,0.1 -1.6,1.4 -3.1,0.8 -2.7,-0.1 0.1,-1.2 4.4,-0.1 z m -4.9,-10.5 4.1,-1.3 5.1,1 2.3,1 0.7,1.8 -1.4,1.8 -2.3,-0.9 -1.1,0.8 -1.1,-0.3 -1.2,-1.4 -1.3,-0.1 -1.7,-2.4 -1,1 3,2.6 1.1,-0.4 1.1,1 -1.3,1 -2,0.3 -0.8,-2.2 -1.7,0.7 -0.2,1.4 1,-0.3 1,0.8 -0.7,1 -2.8,0.1 0.7,-1.3 0.8,-0.3 -1,-2.6 -0.9,0.5 -3.3,-0.9 2.5,-0.1 0.2,-1.1 -1.7,0.5 -0.4,-1 1.6,-0.5 0.7,0.4 1.2,-1 z m -2.1,28.9 -1.2,1.6 -5.1,-0.5 -3.3,-1.7 4.5,-2.2 3.2,-0.4 2.1,-0.7 -0.1,0.7 1.4,1.7 -1.4,1.2 1.4,0.5 -0.9,0.8 z m 6.2,-11 -2,-3.9 0.5,-0.5 3.2,-1.2 0.7,0.5 1.5,-0.2 0.7,0.9 -0.4,3.9 -0.8,1.9 -2,-0.2 z m 65.9,44.6 -2.2,-0.7 -1.3,-1.1 0.7,-3.1 3.5,0.5 -0.3,-0.9 -3.7,-0.1 -1.4,1.6 -0.9,0.3 -1.6,-1.8 -1.5,-0.6 -0.2,2.4 -2,-1.1 -0.8,-1.1 0.7,-0.6 -1,-1.4 -0.5,1.2 -2.1,0.3 -1.9,-3.1 -0.2,1.3 -2,-1.7 -1.1,-2.3 0.9,-0.5 -0.3,-3.1 2.7,-2.4 -0.1,-2.5 -0.9,1.5 -2,1.7 v 3.8 l -1.6,1.1 0.5,2.1 -2.7,2.5 0.8,1.9 -2.9,3.3 -0.9,0.5 -2.1,-0.3 -1.7,0.9 -2.7,-2.6 0.4,-0.1 -1.6,-3.9 0.4,-0.9 2,0.2 0.7,-1.4 -1.6,-1.4 -0.4,-2.8 -1.8,1 -1.5,-1.7 0.4,-0.5 -1.2,-1.4 -3.7,-2.3 -2.1,-0.4 -1.8,0.7 -1.5,-0.7 1,-1.7 -1.3,-0.1 3.7,-2 h 1.7 l 4.3,0.5 2.4,1.3 1.5,-1.2 3,-4.1 2.1,-1 2.2,0.3 1.6,1.9 0.4,-1.1 1.3,1.4 1.4,-1 1,0.5 0.3,2.4 0.4,-3.3 1.7,2.1 -0.1,-2.7 -1.2,-0.5 3.8,-0.7 -1.5,-0.6 0.9,-1.1 -1.8,0.1 -0.7,-0.6 2.4,-1.5 -0.2,-0.9 -3.6,1.2 -1,0.9 -3.1,0.2 -2.4,-0.4 -5.5,1.4 -2,-0.5 -1.8,1 -2.2,-1.8 -3.3,1.4 -2.1,-1.5 -2.3,-0.8 -1.6,-2.2 -0.8,-2.4 1.3,-2 -1.5,0.5 -0.4,-1.6 1,-1 -2.5,1.1 0.1,-1.3 -1.4,0.8 -0.3,-0.9 -2.1,-0.4 -2.2,0.4 -0.9,-1.6 -1.5,0.1 0.8,1.1 -1.8,0.9 -1.3,-1 H 538 l 1,-2.7 2.3,-1 1,-2.1 -0.3,-4 4.6,-1.5 -0.4,0.7 5.6,-1.8 3.2,-3.5 2.6,-1.4 2.6,-0.8 h 4.3 l 3.1,1.3 1.1,-0.2 1.3,1 1.6,0.3 3.8,2.8 5.6,0.1 3.7,-0.6 3.1,2.1 -1.5,0.6 -0.5,1 1.5,2.9 1.3,0.9 1.3,2.2 -0.7,1.3 -0.3,2.2 -1.8,1.8 1.3,5.6 v 2.1 l 0.8,3.2 2.2,2.1 1.2,3.5 1.1,1.8 1.1,-0.4 -1,-3.2 v -1.5 l 1.1,-0.8 -0.5,-1.3 0.9,-1.6 0.1,2.1 1.2,1.9 0.3,4.3 -3.4,3.1 0.1,0.8 -1.8,1.8 -1.2,1.9 0.1,1.5 16.1,5.2 z" id="ID.IB" class="province" onmouseenter="showDetailsMap()" onmouseout="outMouseDetailsMap()">
+                                    <namespace:desc>
+                                        <namespace:labelrank>2</namespace:labelrank>
+                                        <namespace:hasc>ID.IB</namespace:hasc>
+                                        <namespace:alt-name>New Guinea|Yos Sudarso or Frederick Hendrik|Waigeo|Supiori Biak|Yapen|Misool|Salawati|Batanta</namespace:alt-name>
+                                        <namespace:woe-id>28350157</namespace:woe-id>
+                                        <namespace:subregion>NULL</namespace:subregion>
+                                        <namespace:fips>ID39</namespace:fips>
+                                        <namespace:postal-code>IB</namespace:postal-code>
+                                        <namespace:name>Irian Jaya Barat</namespace:name>
+                                        <namespace:country>Indonesia</namespace:country>
+                                        <namespace:type-en>Province</namespace:type-en>
+                                        <namespace:region>NULL</namespace:region>
+                                        <namespace:longitude>132.825</namespace:longitude>
+                                        <namespace:woe-name>Irian Jaya Barat</namespace:woe-name>
+                                        <namespace:latitude>-1.32525</namespace:latitude>
+                                        <namespace:woe-label>West Papua, ID, Indonesia</namespace:woe-label>
+                                        <namespace:type>Propinsi</namespace:type>
+                                        <namespace:hc-middle-x>0.53</namespace:hc-middle-x>
+                                        <namespace:hc-middle-y>0.29</namespace:hc-middle-y>
+                                        <namespace:hc-key>id-ib</namespace:hc-key>
+                                        <namespace:hc-a2>IB</namespace:hc-a2>
+                                    </namespace:desc>
+                                </path>
+                                <path d="m 53.7,98.1 -0.9,1.2 -1.6,-0.7 0.6,-2.8 1.2,-1.5 0.9,1.6 z m 1,-3.6 -0.2,1.6 -4.1,-5.4 1.7,-0.1 1.5,2.8 z m 0.6,-6.8 3.2,0.3 0.2,0.8 -2.4,0.4 L 54,89 53.8,88.2 Z m -2.9,-22.3 1.4,0.4 -2.4,-0.2 0.3,-0.9 z M 79.1,50.8 v 0 z m 0,0 z M 63.2,86.1 62,80.6 61.3,80.7 61.1,78.3 60.2,77.5 59,73.3 l -2.2,-4.4 -0.6,-1.8 0.9,-2.2 -1.4,-1.6 -1.1,0.5 -1.9,-2.5 -1.5,-0.8 -2.6,-0.6 -2.7,-2.1 0.3,-2.2 -1.7,-3.6 0.6,-1.6 -0.2,-2 -2.1,-1.4 -0.5,-2.6 0.5,-0.9 -1.1,-1.7 1.8,-1.2 -1.3,-1.5 -2,-4.6 3.2,-3.7 0.8,-3.9 L 46,26 h 1.2 l 0.1,1.2 -1.2,0.7 -0.1,0.9 1.2,-1.1 0.7,1.4 2.6,0.5 3.1,1.8 0.6,1.7 1.3,1.1 2.5,0.7 3.4,1.8 4.8,3 1.6,1.5 2.4,0.6 1.6,2 2,1.4 0.4,2.2 -0.6,1.4 1.5,-0.4 1.2,2.9 -0.1,-2.2 1.1,-0.5 1.8,2.2 v 0 0 0 l -0.4,3.1 0.6,2.6 v 4.4 l 1.2,0.9 1.1,3.2 -1.3,1.2 -3.6,1.8 -0.5,0.9 1.3,1.9 1,0.7 0.2,4.6 -0.5,1.7 -5.3,-1.4 -1.8,-0.2 1.4,1.5 1.9,3.1 v 1 L 73,82.4 71,82 69.5,81.1 65.9,82.6 Z m -32.5,-16 2.6,-0.1 2,-1.7 1.8,0.6 3.3,4.2 1.5,0.6 2.4,2.3 -0.5,1.2 -0.1,4 -0.8,1.2 H 41 l -1.5,-3.7 -3.5,-1.8 -0.1,-1 -2.3,-3.5 z" id="ID.SU" class="province" onmouseenter="showDetailsMap()" onmouseout="outMouseDetailsMap()">
+                                    <namespace:desc>
+                                        <namespace:labelrank>2</namespace:labelrank>
+                                        <namespace:hasc>ID.SU</namespace:hasc>
+                                        <namespace:alt-name>Sumut</namespace:alt-name>
+                                        <namespace:woe-id>2345735</namespace:woe-id>
+                                        <namespace:subregion>NULL</namespace:subregion>
+                                        <namespace:fips>ID26</namespace:fips>
+                                        <namespace:postal-code>SU</namespace:postal-code>
+                                        <namespace:name>Sumatera Utara</namespace:name>
+                                        <namespace:country>Indonesia</namespace:country>
+                                        <namespace:type-en>Province</namespace:type-en>
+                                        <namespace:region>NULL</namespace:region>
+                                        <namespace:longitude>99.2161</namespace:longitude>
+                                        <namespace:woe-name>Sumatera Utara</namespace:woe-name>
+                                        <namespace:latitude>2.36304</namespace:latitude>
+                                        <namespace:woe-label>North Sumatra, ID, Indonesia</namespace:woe-label>
+                                        <namespace:type>Propinsi</namespace:type>
+                                        <namespace:hc-middle-x>0.61</namespace:hc-middle-x>
+                                        <namespace:hc-middle-y>0.40</namespace:hc-middle-y>
+                                        <namespace:hc-key>id-su</namespace:hc-key>
+                                        <namespace:hc-a2>SU</namespace:hc-a2>
+                                    </namespace:desc>
+                                </path>
+                                <path d="m 123.4,79.1 -0.7,-0.3 0.2,-1.9 0.7,-0.7 1.3,1.2 -0.1,1.3 z m -2.6,-7.7 2.2,2.3 -1.3,0.7 -4.6,-2.6 -2.1,0.4 0.9,-2.2 1.3,-0.2 z m -8.5,1.6 -0.9,0.6 -1,-0.5 -1.6,-1.9 v -1.9 l -0.6,-1.1 0.1,-1.6 h 1.1 l 2.9,2.3 -0.3,2.1 z m -11.8,-15.7 0.8,1.6 -0.7,2.6 -2.1,1.1 -1.7,-0.8 -1.1,-2.4 0.6,-2 1.3,0.1 1.7,-1.2 z m -21.8,-3.4 0.4,-3.1 1.1,3 2.8,2.8 1.6,0.3 3,1.9 0.6,1.6 H 89 l -1,-2.2 -1.3,-1.8 v -1.3 l 1.4,-0.8 h 2.2 l 0.3,1 3.6,2.5 1.3,4 0.8,0.9 2.5,0.7 h 2.8 l 3.8,2.9 1.5,0.7 0.5,2 0.8,1 v 1.7 l 0.8,1.2 3.5,2.9 1.3,0.5 1.7,-0.3 3.1,0.2 2.8,2.4 0.4,1.7 -5.2,3 -1,0.2 -1,1.3 1.7,-1.1 3.1,-0.7 2.5,-1.9 1.3,-0.4 0.8,-1.2 2,-0.8 2.7,1.3 1.1,1.8 0.6,-0.5 1.7,1.4 0.7,3.7 -3,0.2 v 1.2 l -1.3,0.4 -1.1,1.5 1.1,-0.1 -0.7,1.9 0.5,0.2 0.7,-1.6 1.6,-0.3 1.9,0.9 v 0.7 l -2.1,0.7 -1.7,-0.1 1.4,0.7 -0.2,0.7 -2.2,0.8 -0.1,1.3 -0.9,1.4 1.4,0.6 -5,0.7 h -2.7 l -1.7,0.5 -1.7,1.8 -1.9,2.8 -2.9,-1 -1.5,-1.8 -1.1,-0.3 -2.6,0.5 -1.8,1.9 -1.7,0.6 -1.5,-0.9 -2.2,-0.4 -4.5,-3.2 -3.2,-3.2 -0.6,-1.1 -2.2,-1.1 -1.1,-1.6 -0.7,-2.1 1.4,-0.6 -0.2,-3.2 -5.2,-3.6 -2.1,0.6 -1.6,-0.5 -1.7,-2.9 0.1,-1.6 0.5,-1.7 -0.2,-4.6 -1,-0.7 -1.3,-1.9 0.5,-0.9 3.6,-1.8 1.3,-1.2 -1.1,-3.2 -1.2,-0.9 v -4.4 z m 39.5,21.3 h -2.5 l -1.8,0.5 -2.4,-1.3 1.4,-1.6 -0.3,-2.3 h 1 l 1.4,1.9 1.8,-0.3 3.9,2.2 0.5,1 -0.6,1.3 z M 105,63.7 l 1,-0.2 2.5,0.7 1.7,0.1 2.1,0.9 0.5,3.1 -1.2,-0.2 -1.6,-1.7 -3,-0.4 -1.1,-0.8 z" id="ID.RI" class="province" onmouseenter="showDetailsMap()" onmouseout="outMouseDetailsMap()">
+                                    <namespace:desc>
+                                        <namespace:labelrank>2</namespace:labelrank>
+                                        <namespace:hasc>ID.RI</namespace:hasc>
+                                        <namespace:alt-name>Rhio|Riou|Riouw</namespace:alt-name>
+                                        <namespace:woe-id>2345728</namespace:woe-id>
+                                        <namespace:subregion>NULL</namespace:subregion>
+                                        <namespace:fips>ID37</namespace:fips>
+                                        <namespace:postal-code>RI</namespace:postal-code>
+                                        <namespace:name>Riau</namespace:name>
+                                        <namespace:country>Indonesia</namespace:country>
+                                        <namespace:type-en>Province</namespace:type-en>
+                                        <namespace:region>NULL</namespace:region>
+                                        <namespace:longitude>101.745</namespace:longitude>
+                                        <namespace:woe-name>Riau</namespace:woe-name>
+                                        <namespace:latitude>0.396892</namespace:latitude>
+                                        <namespace:woe-label>Riau, ID, Indonesia</namespace:woe-label>
+                                        <namespace:type>Propinsi</namespace:type>
+                                        <namespace:hc-middle-x>0.41</namespace:hc-middle-x>
+                                        <namespace:hc-middle-y>0.55</namespace:hc-middle-y>
+                                        <namespace:hc-key>id-ri</namespace:hc-key>
+                                        <namespace:hc-a2>RI</namespace:hc-a2>
+                                    </namespace:desc>
+                                </path>
+                                <path d="m 450.2,30.1 -1,-1.3 0.3,-1.2 1,0.3 -0.7,1 z m 2.2,-13.4 0.7,1.1 -0.6,0.7 -1.9,-1.2 0.1,-1.4 -1.2,-0.8 -0.1,-1.5 1.1,0.3 z m 18,-4.7 -1.1,-0.3 -0.4,-1.2 1,0.4 z m -2.2,-0.8 -0.6,-1.8 -0.9,-1.6 1.6,1.7 z M 467.9,4.4 467.7,2 468,0.2 469.2,0 l 1,0.7 -0.1,1.9 1,1.3 -1.5,2 0.1,1.8 -0.7,0.7 -1.5,-0.5 1.9,-3 z m -51.1,53.1 4.1,-0.2 2.9,0.8 0.8,-0.4 3.3,0.7 1.7,-0.2 0.9,-1 2.1,-0.8 2.4,-1.5 1,-2.3 3,-0.3 0.3,-0.9 -1,-0.3 -0.1,-1.2 1,-0.9 1.1,0.2 2.3,-1.5 -0.3,-1.5 2.9,-2.3 0.1,0.8 2.1,0.1 -0.1,1.2 1.3,1.4 0.6,-1 -0.3,2.1 h -1.8 l -1.5,3.7 -1.8,3.2 -1.1,0.5 -2.3,2.2 -0.4,1.2 -1.8,3 0.2,0.4 -2.8,1.7 -3.8,0.9 -4.8,0.9 -1.6,0.7 -2.7,-0.5 0.6,-1.8 -1.1,-2.6 -3,-1.7 -0.7,-1.5 z" id="ID.SW" class="province" onmouseenter="showDetailsMap()" onmouseout="outMouseDetailsMap()">
+                                    <namespace:desc>
+                                        <namespace:labelrank>2</namespace:labelrank>
+                                        <namespace:hasc>ID.SW</namespace:hasc>
+                                        <namespace:alt-name>Sulut</namespace:alt-name>
+                                        <namespace:woe-id>28350156</namespace:woe-id>
+                                        <namespace:subregion>NULL</namespace:subregion>
+                                        <namespace:fips>ID31</namespace:fips>
+                                        <namespace:postal-code>SW</namespace:postal-code>
+                                        <namespace:name>Sulawesi Utara</namespace:name>
+                                        <namespace:country>Indonesia</namespace:country>
+                                        <namespace:type-en>Province</namespace:type-en>
+                                        <namespace:region>NULL</namespace:region>
+                                        <namespace:longitude>124.446</namespace:longitude>
+                                        <namespace:woe-name>Sulawesi Utara</namespace:woe-name>
+                                        <namespace:latitude>0.853039</namespace:latitude>
+                                        <namespace:woe-label>North Sulawesi, ID, Indonesia</namespace:woe-label>
+                                        <namespace:type>Propinsi</namespace:type>
+                                        <namespace:hc-middle-x>0.24</namespace:hc-middle-x>
+                                        <namespace:hc-middle-y>0.91</namespace:hc-middle-y>
+                                        <namespace:hc-key>id-sw</namespace:hc-key>
+                                        <namespace:hc-a2>SW</namespace:hc-a2>
+                                    </namespace:desc>
+                                </path>
+                                <path d="m 464.1,105.9 -1.7,-0.8 -0.4,-2 -0.7,-0.5 -0.7,-2.2 1,-1.9 0.8,0.4 v 2.9 l 1.4,2.7 z m 23.7,-19.6 -0.4,0.6 -3.2,-0.4 1.3,-1 z m -6.1,-6.5 h -2.5 l 0.8,-2.5 1.3,1.2 z m -2,-8 1.2,0.4 -0.5,0.9 0.3,1.8 -2.2,1.2 -0.3,-3.6 z m 35.7,-2.3 -1.5,-1.5 -1.4,-0.4 -1,-1.9 4.1,3.2 z m -33,-3.8 0.5,0.4 0.4,2.4 -1.1,-1.4 z m -0.2,-9.1 0.3,1.2 -1,0.7 v -2 z m -1.3,-0.1 -1,-0.8 0.6,-0.7 0.9,0.8 z m -22.9,40 4.4,-0.7 5.3,0.3 -1.1,0.8 -4.4,0.7 -5.4,0.4 -2.8,0.7 0.1,-0.9 -1.5,-1.2 1.2,-0.3 0.9,-0.3 z m -16.2,-2.1 5.9,1.1 1.1,0.4 0.3,-1 1,0.2 0.2,1.2 1.3,-0.8 0.7,2 -4.1,0.5 -0.5,0.9 -2.4,-0.6 -4.6,1.8 -2.1,0.1 -1.2,-2.6 0.7,-2.4 2.1,-0.6 z m 51.7,-1 -1.8,-0.4 -3.5,0.2 -2.6,0.8 -2.4,-1.4 0.7,-3.4 0.8,0.5 2.1,-1.9 2.1,0.5 1.1,0.9 1,-0.1 2.3,1.7 1.4,0.4 0.3,1.4 z m -6.8,-15 2.1,-0.4 1.7,1.1 -1.1,1.6 -1.1,0.3 -1.5,-0.8 -0.4,-1.1 -2.5,1.1 -0.4,-1.5 0.4,-1.2 -1.1,-0.2 -1.5,-1.6 0.1,-2.6 0.6,-0.2 1.6,1.1 0.8,-1.6 0.9,0.3 0.9,1.3 0.8,0.6 -1,2.7 z m 10.5,-42.5 -3.1,0.4 -0.7,-1 -0.3,-2.1 -0.6,-0.2 1.7,-3.1 2.1,-2.2 2,-0.3 1.6,2.5 -0.6,2.7 -1,2.4 z m -4.4,42.3 -3.3,-5.1 -2.2,-1.1 -0.6,-0.8 0.2,-4.2 -0.4,-1.8 0.4,-1.7 -2.3,-2.1 -0.8,-2 0.3,-2.8 1,-1.4 -1.8,-0.7 -0.7,-2.7 -1,0.4 -0.2,-2.8 1.9,-3.9 -0.4,-0.8 0.7,-3.4 1.5,-2.7 3.2,-3.9 2,-0.6 0.1,0.8 -1.5,2.6 -1.1,0.9 -0.1,1.6 1.3,0.3 1.2,1.1 -0.2,1.4 0.7,1.3 -0.7,3.7 -1.1,2.2 -0.9,0.3 -2.9,2.3 0.4,1.7 2.2,1.2 1.9,-1.2 0.1,-2 1.7,-1.9 1.6,-0.2 0.5,-1 -1.7,-0.9 1.4,-1.8 2.6,-2.1 1.4,-0.8 3.9,-0.6 -0.4,1.9 0.9,0.6 -0.3,5.1 -3.9,2.4 -1.8,0.5 -0.3,1.3 -1.2,0.7 1.6,1.6 5.8,1.6 0.2,2.9 2.1,0.5 0.6,1 -5,-1 -1,-0.9 -3.2,0.1 -1.8,-0.9 H 492 l -1.5,-0.2 -0.7,0.7 -0.4,2.1 0.8,2.3 -0.3,2.5 2.1,4.4 0.5,1.5 3,4.3 3.3,2.9 -2.3,-0.4 -1.3,-1.6 z" id="ID.LA" class="province" onmouseenter="showDetailsMap()" onmouseout="outMouseDetailsMap()">
+                                    <namespace:desc>
+                                        <namespace:labelrank>2</namespace:labelrank>
+                                        <namespace:hasc>ID.LA</namespace:hasc>
+                                        <namespace:alt-name>Malut</namespace:alt-name>
+                                        <namespace:woe-id>20069998</namespace:woe-id>
+                                        <namespace:subregion>NULL</namespace:subregion>
+                                        <namespace:fips>ID29</namespace:fips>
+                                        <namespace:postal-code>LA</namespace:postal-code>
+                                        <namespace:name>Maluku Utara</namespace:name>
+                                        <namespace:country>Indonesia</namespace:country>
+                                        <namespace:type-en>Province</namespace:type-en>
+                                        <namespace:region>NULL</namespace:region>
+                                        <namespace:longitude>125.976</namespace:longitude>
+                                        <namespace:woe-name>Maluku Utara</namespace:woe-name>
+                                        <namespace:latitude>-2.28945</namespace:latitude>
+                                        <namespace:woe-label>North Maluku, ID, Indonesia</namespace:woe-label>
+                                        <namespace:type>Propinsi</namespace:type>
+                                        <namespace:hc-middle-x>0.63</namespace:hc-middle-x>
+                                        <namespace:hc-middle-y>0.22</namespace:hc-middle-y>
+                                        <namespace:hc-key>id-la</namespace:hc-key>
+                                        <namespace:hc-a2>LA</namespace:hc-a2>
+                                    </namespace:desc>
+                                </path>
+                                <path d="m 81.6,130.2 -0.9,1 -1.9,0.3 -0.5,-1 0.1,-1.9 -0.6,-1.2 0.2,-1.1 3.5,2.7 z m -8,-8.9 2.4,3.2 -3.9,-1.1 -1.2,-1.6 0.8,-2.1 1.6,0.7 z m 24.5,1 -2.4,1.2 -2,1.8 -1.7,-2.1 -1.6,-2.8 0.8,-1.6 -0.6,-2.1 -1.2,-1.1 -2.2,-3.2 -0.3,-1.2 -1,-0.9 -0.1,-1.7 -2.5,-0.9 0.2,-1 -0.8,-0.5 0.5,-1.8 -0.5,-0.1 -1.4,-3.1 -2.2,-2.1 -2.6,-3.1 -2.9,-2.2 -0.9,-1.9 -0.3,-2 -2.2,-1.9 -3.1,-0.8 -1.4,-1.1 -1.1,0.5 -1.4,-0.5 2.7,-3.5 3.6,-1.5 1.5,0.9 2,0.4 1.4,-0.6 v -1 l -1.9,-3.1 -1.4,-1.5 1.8,0.2 5.3,1.4 -0.1,1.6 1.7,2.9 1.6,0.5 2.1,-0.6 5.2,3.6 0.2,3.2 -1.4,0.6 0.7,2.1 1.1,1.6 2.2,1.1 0.6,1.1 3.2,3.2 4.5,3.2 2.2,0.4 1.5,0.9 0.3,1.4 0.9,0.5 -0.6,1.1 -1.7,0.8 0.1,3.2 -3.2,3.4 -3.3,0.3 -1.7,-0.2 0.6,3.2 1.9,2.3 z m -16.5,11 -0.3,-2 0.7,-0.9 3.8,3.4 v 0.8 l 0.1,0.9 -1.3,0.4 1.6,2.3 -1.5,-0.5 -0.6,-2.1 z m -21,-29.1 -0.1,0.7 2.7,3.8 1.1,2.9 2.2,2.2 -0.1,2.5 -2.3,0.6 -3.3,-1.6 -1.3,-2.2 -3.6,-4.8 0.7,-1.6 0.1,-2 3.4,-0.9 z" id="ID.SB" class="province" onmouseenter="showDetailsMap()" onmouseout="outMouseDetailsMap()">
+                                    <namespace:desc>
+                                        <namespace:labelrank>2</namespace:labelrank>
+                                        <namespace:hasc>ID.SB</namespace:hasc>
+                                        <namespace:alt-name>Sumbar</namespace:alt-name>
+                                        <namespace:woe-id>2345733</namespace:woe-id>
+                                        <namespace:subregion>NULL</namespace:subregion>
+                                        <namespace:fips>ID24</namespace:fips>
+                                        <namespace:postal-code>SB</namespace:postal-code>
+                                        <namespace:name>Sumatera Barat</namespace:name>
+                                        <namespace:country>Indonesia</namespace:country>
+                                        <namespace:type-en>Province</namespace:type-en>
+                                        <namespace:region>NULL</namespace:region>
+                                        <namespace:longitude>100.611</namespace:longitude>
+                                        <namespace:woe-name>Sumatera Barat</namespace:woe-name>
+                                        <namespace:latitude>-0.642611</namespace:latitude>
+                                        <namespace:woe-label>West Sumatra, ID, Indonesia</namespace:woe-label>
+                                        <namespace:type>Propinsi</namespace:type>
+                                        <namespace:hc-middle-x>0.59</namespace:hc-middle-x>
+                                        <namespace:hc-middle-y>0.32</namespace:hc-middle-y>
+                                        <namespace:hc-key>id-sb</namespace:hc-key>
+                                        <namespace:hc-a2>SB</namespace:hc-a2>
+                                    </namespace:desc>
+                                </path>
+                                <path d="m 498.9,191.7 -0.2,1.1 -1.6,-0.1 v -0.9 z m 12.3,0 -1.8,0.6 -1.2,-0.8 2.2,-0.3 z m -20.3,0.6 -1.3,-0.5 1.1,-0.8 1.4,0.9 z m 2.1,-2.2 4.3,1.2 -1.1,1.1 -3.7,-1.1 -0.4,-1.1 z m 49.3,0.2 1.3,0.2 -2.6,1.3 -1.5,0.2 -0.2,0.9 -1.8,0.7 1.4,-1.8 2.8,-2.4 z m -20.1,-4.9 1.2,0.4 0.3,1.4 -1.3,1.9 -1.2,-0.2 -1.6,-1.8 0.6,-1.9 z m 20.9,-3.1 -0.3,0.9 -2.1,0.4 0.4,-0.7 z m -56.9,1.1 -0.3,-2.1 1.7,0.3 0.1,0.7 z m 57.7,-4.3 -1.5,1.3 -1.2,-0.2 0.3,-1.1 z m 11.3,-4.9 0.9,1.1 -0.2,1.2 -1.3,-1.3 h -1.7 l -0.2,-0.9 z m -49.6,1.8 -0.6,0.6 -1.6,-1 1.3,-1.4 1.2,0.7 z m 92.6,-7.5 -0.9,-0.1 1,-2.5 0.7,0.2 z m 0.8,-3.3 -1.2,0.2 -0.5,-1.1 1.5,-0.1 z m -1.9,-2 -1.5,1.5 -0.8,-1.4 -1.7,-0.7 1.5,-1.4 z m 3.6,0.6 -0.7,-0.9 0.7,-1.8 0.7,0.8 z m -10.8,-7 1.1,0.3 0.1,1.6 1.6,1.6 1.4,0.7 -1.3,0.9 -3.1,-2.7 z m -22.8,-5.8 1.6,3.8 -1,1.4 -1.1,-0.8 0.1,-2.9 -0.9,-1.7 z m 1.3,-1 0.4,1.8 -0.8,0.1 -0.2,-1.6 z m -85.9,-23 -1,0.1 -0.6,-1 1.5,-0.4 z m 18,-4.9 -0.4,-1.2 1.8,-0.2 0.6,0.8 z m -1.7,-0.8 0.2,0.9 -1.3,-0.2 0.4,0.9 -1.7,1.1 0.6,-1.6 -3.2,2.2 -1.2,-1 1.8,-1.8 1.9,-0.2 1.9,-1.3 z m 5.1,-0.7 0.7,-0.5 0.4,1.7 -0.9,-0.7 -0.7,0.8 -0.9,-1.3 z m -17.3,-3.6 0.8,0.2 0.6,1.3 -2.2,-0.9 z m 3.7,-0.3 -2.1,-0.2 1,-1.1 0.8,-0.1 z m 3,-4.6 -0.5,1.1 -1.7,0.3 0.2,-0.7 z m -18.6,70.2 1.5,1.6 1.1,-0.1 0.7,1.1 -1.9,0.2 -2.3,1.1 -1.4,2.3 -0.7,-0.5 -3.4,-0.1 -1.8,-0.6 -2.2,0.5 -1.7,1.4 -0.5,-0.2 0.4,-1.9 0.9,-0.8 1.2,-2 3.8,0.4 1.9,-0.3 2.6,-1.6 z m 74.5,-7 1.6,-1 0.3,0.9 0.8,-0.5 0.5,1 -1.5,0.9 0.9,2.4 -0.8,2.9 -1.3,1.7 -2.6,2.2 -1.1,2.6 -0.5,-1.3 -0.8,1.1 -1.8,-0.1 -0.5,-1.9 1.2,-1 -0.4,-1.9 1,0.4 -0.1,-1.8 0.9,-1.9 1.5,-0.6 0.7,-1.4 z m 43.2,-5.1 -1.9,0.9 -2.1,-2.2 0.7,-4.8 1.3,0.2 -1,-1 -0.4,-3.1 0.6,-0.7 2.5,1.8 -0.1,0.7 2.4,1.6 1.3,2.2 z m 0.5,-18.1 1.6,-2.8 0.8,0.2 -0.2,-1.6 1.4,-0.4 1.8,1.7 -0.8,0.8 1.8,1.4 -0.8,2.6 1,0.8 -2.2,0.7 2.3,2.5 -1.1,3.7 -1.4,0.7 -4.4,-2.3 -0.7,-1 v -3.6 l 1.1,-1.2 v -1.1 l -2.5,-0.8 0.8,-0.8 z m -21.1,-0.7 1.5,-5.3 h 1.2 l -1,4.5 -1.1,0.8 -1.1,1.3 -0.3,2.2 -1.7,1.8 1.3,-4.5 z m -108.5,-33.6 1.4,-2.1 1.4,0.9 1.7,-1.1 1.8,-0.7 4.6,-0.3 2.3,0.7 3.4,1.2 0.3,1.1 h -1 l 0.3,0.9 h 1.5 l 1.6,0.7 -0.2,3.3 -0.6,0.9 -1.2,-0.1 -2.6,1.8 -3.1,1.5 -2.3,-0.5 -6.4,-3 -0.4,-1.2 -1.5,-1.1 z m 54.8,-8.8 3.3,1.6 3.5,1 4.5,-0.4 2.3,1.6 1.4,0.5 0.8,1.4 0.7,2.9 h 1.5 l 1.8,2.5 -0.6,1.9 0.3,2.6 -3.7,-1.2 -3,-2.1 -4.5,-1.5 -2.3,-1 -0.3,-1.2 -1.2,-0.7 -5.3,-0.4 -0.6,0.6 1,1.6 -1.2,0.4 -2,-0.8 h -1.9 l -1.9,-0.8 -2.3,0.2 0.3,-1.6 -1.7,-0.7 -2.7,2.4 -0.2,1.2 -2.9,0.6 -1.3,-0.7 -1.9,-2.9 -1.6,-0.3 0.3,-1.3 -1,-0.5 -1,1.9 -0.1,1.5 -1,1.3 -0.9,2.7 -0.4,-0.5 0.4,-2 -0.3,-1.2 -1.2,-2 2.5,-1.6 1.5,-0.2 0.2,-1.8 0.7,-1.4 3.2,-0.1 2,-0.5 1.3,0.3 h 4.1 l 2.8,-1 0.2,1.4 0.9,0.9 3.6,-1.7 1.3,-1.1 z" id="ID.MA" class="province" onmouseenter="showDetailsMap()" onmouseout="outMouseDetailsMap()">
+                                    <namespace:desc>
+                                        <namespace:labelrank>2</namespace:labelrank>
+                                        <namespace:hasc>ID.MA</namespace:hasc>
+                                        <namespace:alt-name>Molucas||Moluccas|Molucche|Moluckerna|Moluqu</namespace:alt-name>
+                                        <namespace:woe-id>20069997</namespace:woe-id>
+                                        <namespace:subregion>NULL</namespace:subregion>
+                                        <namespace:fips>ID28</namespace:fips>
+                                        <namespace:postal-code>MA</namespace:postal-code>
+                                        <namespace:name>Maluku</namespace:name>
+                                        <namespace:country>Indonesia</namespace:country>
+                                        <namespace:type-en>Province</namespace:type-en>
+                                        <namespace:region>NULL</namespace:region>
+                                        <namespace:longitude>128.161</namespace:longitude>
+                                        <namespace:woe-name>Maluku</namespace:woe-name>
+                                        <namespace:latitude>-8.248139999999999</namespace:latitude>
+                                        <namespace:woe-label>Maluku, ID, Indonesia</namespace:woe-label>
+                                        <namespace:type>Propinsi</namespace:type>
+                                        <namespace:hc-middle-x>0.38</namespace:hc-middle-x>
+                                        <namespace:hc-middle-y>0.06</namespace:hc-middle-y>
+                                        <namespace:hc-key>id-ma</namespace:hc-key>
+                                        <namespace:hc-a2>MA</namespace:hc-a2>
+                                    </namespace:desc>
+                                </path>
+                                <path d="m 341,198.3 -1,-0.5 v -2.4 l 2.5,-0.5 z m 22.6,-2.7 -1.2,-0.2 0.3,-1.3 1.3,0.2 z m -39.8,0.8 3.8,0.9 1.6,1.7 -0.8,2.4 -2.5,3.7 1,1.4 -1.9,0.3 0.6,-1.1 -1.1,0.3 0.1,1.4 -1,-0.7 -1.9,0.3 -0.8,-0.6 -2.1,0.5 -2.6,-1.5 3.3,-1.3 0.1,-2 -0.8,-1.9 1,-0.6 2.4,-2.4 z m 21.1,1.4 -1.7,-1.8 0.3,-1 2.4,-1.1 3.2,0.2 2,3.1 0.9,0.5 2,-1.7 3,0.4 0.7,1.2 -0.5,2.3 1,-1.2 v -1.5 l 1.2,-0.8 2.6,0.1 1,2.3 -0.1,2.4 2.4,-0.4 -0.9,2 -2.2,0.2 -1.4,-0.9 -1.9,0.4 -0.2,1 2.6,0.2 0.3,0.6 -1.7,0.2 -1.1,-0.6 -4.2,1 -1.2,-0.9 0.7,-1.4 -0.6,-0.4 -3.4,2.9 -1.1,-0.3 -2.7,1.5 -2.3,-0.3 -2.5,1.4 -3.3,1 -2.4,-0.3 -0.6,0.9 -1.7,0.3 -3.6,-1.2 -0.5,-2.1 1.2,-1.3 -1.1,-1.7 1.2,-2.4 2.1,-0.2 3,-2.2 3.6,1.7 0.1,-1.1 1.6,-0.1 0.6,1.6 0.5,-0.9 0.3,1.4 1.2,0.1 1.2,2.3 1.2,-0.4 1.2,0.7 1.4,-1.4 3.1,-0.3 -2.2,-2.2 -1.9,-0.1 z" id="ID.NB" class="province" onmouseenter="showDetailsMap()" onmouseout="outMouseDetailsMap()">
+                                    <namespace:desc>
+                                        <namespace:labelrank>2</namespace:labelrank>
+                                        <namespace:hasc>ID.NB</namespace:hasc>
+                                        <namespace:alt-name>NTB</namespace:alt-name>
+                                        <namespace:woe-id>2345726</namespace:woe-id>
+                                        <namespace:subregion>NULL</namespace:subregion>
+                                        <namespace:fips>ID17</namespace:fips>
+                                        <namespace:postal-code>NB</namespace:postal-code>
+                                        <namespace:name>Nusa Tenggara Barat</namespace:name>
+                                        <namespace:country>Indonesia</namespace:country>
+                                        <namespace:type-en>Province</namespace:type-en>
+                                        <namespace:region>NULL</namespace:region>
+                                        <namespace:longitude>116.294</namespace:longitude>
+                                        <namespace:woe-name>Nusa Tenggara Barat</namespace:woe-name>
+                                        <namespace:latitude>-8.571059999999999</namespace:latitude>
+                                        <namespace:woe-label>West Nusa Tenggara, ID, Indonesia</namespace:woe-label>
+                                        <namespace:type>Propinsi</namespace:type>
+                                        <namespace:hc-middle-x>0.41</namespace:hc-middle-x>
+                                        <namespace:hc-middle-y>0.62</namespace:hc-middle-y>
+                                        <namespace:hc-key>id-nb</namespace:hc-key>
+                                        <namespace:hc-a2>NB</namespace:hc-a2>
+                                    </namespace:desc>
+                                </path>
+                                <path d="m 435.9,160.1 -0.5,0.1 -1.1,-1.5 1,-0.1 z m -6.9,-9.4 -1.1,-0.2 -0.3,-1.6 1.2,0.3 z m -25.6,-3.1 0.7,-0.5 1.5,1.8 v 3.6 l -1.3,0.6 -1.3,-1.1 -1.2,-1.9 0.6,-2.4 z m 16.7,-16.9 1.8,-0.2 0.8,1.4 -1.2,2 -1.2,0.3 -1.7,-1.5 -0.5,-1.2 1.2,-1.2 z m -30.4,-14.9 1.1,-0.6 h 1.7 l 3.1,2 1.8,-0.8 2.7,0.1 4.2,1.4 2.2,0.2 2.1,1.7 -0.7,1.2 1.2,0.8 -1.8,0.1 0.7,1.1 -1.3,1.6 0.8,1.5 1.6,1 h 1.3 l 1.4,1.9 2,0.7 -1.6,0.9 1.5,0.4 0.4,1.7 h 2.5 l -1.1,-1.1 1.1,0.1 1,2 v 2.9 l -0.8,0.7 -2.7,-1.7 1.6,2.4 -2.6,-1.2 -1.5,0.7 -1,-0.3 -4.7,1.8 -0.9,2.8 1.4,1.3 -2,0.9 -2.6,-0.5 -1.7,0.4 -2.3,-1.3 -1.1,-1.3 0.5,-6.3 0.8,0.1 0.5,-2.3 -1.1,-0.9 -3,-0.6 -1.4,-2 -1.6,-0.5 -4.1,-3.6 -0.4,-1.4 1.5,-2.7 1.2,-1.1 -0.3,-1.9 z m 25.6,24.6 0.8,4.5 -1.9,2 -0.6,2.3 0.9,1.3 -0.7,1.4 -0.9,0.3 -0.6,-2.1 -0.6,1.6 -0.9,-0.6 -1.9,0.3 0.8,-3.9 0.9,-0.7 -1.3,-3.3 1.1,-1.5 1.4,-0.2 2.3,-1.6 z m 1.3,8.7 -0.7,-1 0.6,-1.8 0.7,-3.4 -0.2,-2.5 0.8,-2.6 1.6,-1.3 2.6,2.5 0.4,1.7 0.2,2 -1.5,-1.5 -1.1,0.5 -0.4,2.8 -0.7,1 0.3,1.4 -0.5,1.3 1.1,-0.5 2.6,1.5 0.3,0.7 -0.9,1.3 -1.2,0.5 -1.3,-0.3 -1.5,1 0.7,1 -1.3,2.3 -1.4,-0.7 -1.4,0.6 -1.2,-2.3 2.4,-3.8 z" id="ID.SG" class="province" onmouseenter="showDetailsMap()" onmouseout="outMouseDetailsMap()">
+                                    <namespace:desc>
+                                        <namespace:labelrank>2</namespace:labelrank>
+                                        <namespace:hasc>ID.SG</namespace:hasc>
+                                        <namespace:alt-name>Sultra</namespace:alt-name>
+                                        <namespace:woe-id>2345731</namespace:woe-id>
+                                        <namespace:subregion>NULL</namespace:subregion>
+                                        <namespace:fips>ID22</namespace:fips>
+                                        <namespace:postal-code>SG</namespace:postal-code>
+                                        <namespace:name>Sulawesi Tenggara</namespace:name>
+                                        <namespace:country>Indonesia</namespace:country>
+                                        <namespace:type-en>Province</namespace:type-en>
+                                        <namespace:region>NULL</namespace:region>
+                                        <namespace:longitude>122.119</namespace:longitude>
+                                        <namespace:woe-name>Sulawesi Tenggara</namespace:woe-name>
+                                        <namespace:latitude>-4.0746</namespace:latitude>
+                                        <namespace:woe-label>South East Sulawesi, ID, Indonesia</namespace:woe-label>
+                                        <namespace:type>Propinsi</namespace:type>
+                                        <namespace:hc-middle-x>0.28</namespace:hc-middle-x>
+                                        <namespace:hc-middle-y>0.27</namespace:hc-middle-y>
+                                        <namespace:hc-key>id-sg</namespace:hc-key>
+                                        <namespace:hc-a2>SG</namespace:hc-a2>
+                                    </namespace:desc>
+                                </path>
+                                <path d="m 430.6,100.5 -1.1,-0.1 -0.2,-1.8 0.9,0.8 z M 419,99.4 h -0.5 l 0.4,-2.1 0.8,1 z m 6.8,-4.7 0.7,0.4 -0.5,1.4 -1.3,-0.2 -0.3,-2.1 0.6,-1.2 z m -26.4,-16.5 0.9,1 -0.5,0.6 -3,-0.5 z m 3,-1.2 0.2,-0.9 0.8,1.8 -2.9,0.5 -0.8,-0.3 0.7,-1.3 z m -36.7,9.3 1.7,-1.5 -0.4,-0.4 1.1,-1.1 1.8,3.4 v -2.3 l -1,-1.6 -0.6,-2 0.2,-5.3 -0.9,0.2 -1.4,-0.9 0.5,-1.3 2.3,1.7 0.8,-2.4 -1.6,-2.4 1.2,-0.8 -0.3,-0.8 0.8,-2 1.7,-0.7 -0.2,-2.2 0.5,-1.1 2.5,-1.5 0.5,-2.4 0.9,0.1 0.2,1.9 3.3,0.9 1.7,-3.3 0.6,0.2 1,-1.3 0.1,-3.6 1.2,-0.7 3.8,0.5 1.6,1 2.7,-1.2 -0.2,1 0.8,1.6 2.3,0.8 4.3,-0.8 0.8,1 1.7,-0.6 1.6,0.4 -2.9,1.6 -2.3,-0.4 -4.9,2.1 -1.9,-0.1 -1.1,0.5 -0.9,1.6 -1.1,0.6 1.5,1.4 1.2,0.1 v 1.7 l -2.5,0.2 -0.6,0.7 -2,-0.4 -1.4,0.4 -3.2,-1.4 -2.6,0.2 -1.9,0.8 -1.4,1.6 -2,3 -0.5,2.6 -0.9,1.2 -0.3,2 1.8,6.5 2.4,3.3 1.3,0.7 1.2,-0.6 1.4,1 1.3,1.9 -0.2,1.6 1.8,2.6 2.2,-1 1,0.8 1.4,-0.3 1.3,0.6 1.3,-1.6 0.4,-1.8 1,-0.8 3.2,-4.5 2.4,-0.8 0.9,1.8 3.1,0.2 2.7,-0.6 0.7,-1.9 0.7,-0.6 6,-0.5 1.6,0.6 2.9,-0.6 0.7,-0.5 -2.7,-0.6 -0.7,-0.5 1.3,-0.6 3,-0.3 0.7,-0.7 2.4,0.1 2.5,0.9 0.9,1.7 -0.9,3.7 -1,0.8 -2.5,-1.6 -0.9,-1.5 -0.5,0.7 -3.7,0.8 -1.2,2.8 -1.1,0.8 -2.3,3.5 -1.6,1.7 -2.6,1.9 -2.5,0.2 -3.2,1.6 -1.5,2.9 -2.2,0.3 -1.6,-1.5 -1.9,-0.4 0.6,1.1 v 2 l 0.8,-1.3 2.1,2.1 0.7,1.5 1.9,0.2 1.8,1.5 1,1.8 2.2,2.9 v 1.2 l 2.5,1.6 0.2,0.8 1.9,0.9 -0.5,1.6 2.9,2 -0.5,1 -1.3,-0.1 -2.1,-1.7 -2.2,-0.2 -4.2,-1.4 -2.7,-0.1 2.4,-2.7 0.2,-1.9 -5.2,-3.9 -1.5,-0.6 -8.2,-1.2 -2.8,-1.9 -2.8,-3.3 -0.6,-0.4 -1.6,1 -2.1,-0.5 -1.6,0.1 -2.5,1.5 -0.8,-1.2 0.3,-1.2 -1.9,-2.6 -0.6,-2.2 -0.8,-0.9 -2.3,-0.8 -0.1,-0.6 1.6,-2.2 -0.5,-1.4 z m 48.9,4.1 0.9,-1.4 1.1,0.1 3.4,-0.7 0.7,1 -0.6,0.5 0.5,2 2.5,-2.7 2,0.7 v 2.4 l -1,0.9 -1.4,0.4 -0.6,-1.4 -1,0.8 v 2.3 H 420 l -1.1,-0.9 1.1,-1.1 -0.5,-2.6 -1,0.6 -1.4,2.5 -1.7,1.2 -1,-2.1 z" id="ID.ST" class="province" onmouseenter="showDetailsMap()" onmouseout="outMouseDetailsMap()">
+                                    <namespace:desc>
+                                        <namespace:labelrank>2</namespace:labelrank>
+                                        <namespace:hasc>ID.ST</namespace:hasc>
+                                        <namespace:alt-name>Sulteng</namespace:alt-name>
+                                        <namespace:woe-id>2345730</namespace:woe-id>
+                                        <namespace:subregion>NULL</namespace:subregion>
+                                        <namespace:fips>ID21</namespace:fips>
+                                        <namespace:postal-code>ST</namespace:postal-code>
+                                        <namespace:name>Sulawesi Tengah</namespace:name>
+                                        <namespace:country>Indonesia</namespace:country>
+                                        <namespace:type-en>Province</namespace:type-en>
+                                        <namespace:region>NULL</namespace:region>
+                                        <namespace:longitude>120.153</namespace:longitude>
+                                        <namespace:woe-name>Sulawesi Tengah</namespace:woe-name>
+                                        <namespace:latitude>-1.30097</namespace:latitude>
+                                        <namespace:woe-label>Central Sulawesi, ID, Indonesia</namespace:woe-label>
+                                        <namespace:type>Propinsi</namespace:type>
+                                        <namespace:hc-middle-x>0.30</namespace:hc-middle-x>
+                                        <namespace:hc-middle-y>0.68</namespace:hc-middle-y>
+                                        <namespace:hc-key>id-st</namespace:hc-key>
+                                        <namespace:hc-a2>ST</namespace:hc-a2>
+                                    </namespace:desc>
+                                </path>
+                                <path d="m 665.5,194.5 -0.2,0.9 -5.4,-0.7 0.1,-1 2.1,-2 2.3,0.1 0.1,1.5 z m -2.2,-24.2 -1.1,-0.3 -0.9,-2.1 2,0.8 z M 603.4,85 h 3.3 l -0.9,0.6 -2.7,0.1 z m -3.4,-6.3 1,-0.9 -0.5,1.8 -1.7,-0.2 -0.9,-1.3 1.2,-1.5 1.3,1 z m 51.5,103.6 3.6,-2.5 2.4,-0.8 3.7,-0.6 2.9,0.2 2.2,2.8 2.2,0.6 -1.4,2.6 -0.2,1.5 -1.6,1.6 0.1,1.8 -2.4,1.7 -1.4,0.3 -0.9,1.4 -2.6,1.9 -2.5,0.6 -1.8,-0.5 -5.3,-0.3 -3.4,0.8 v -0.6 l 2,-5.1 0.7,-0.5 1.6,-3.6 z M 622,91.1 l -9,-2.9 -3.8,-0.3 -1,-1 0.9,-0.4 6.7,0.7 4.7,-0.1 3.3,1 5,-0.1 2.4,0.5 0.4,0.8 -2.3,0.2 -1.3,0.9 -3.1,0.4 -1.9,-0.5 z m -14.9,-18.2 0.5,-1.1 2.8,0.5 1.2,-0.2 1.7,0.9 1.1,-0.9 3.6,2.6 2.2,3 1.6,-0.2 1.3,0.5 -1.2,1.5 -2.4,0.8 -2.5,-0.8 -1.4,0.4 -1.3,-1.2 -0.9,-3.7 -0.7,-0.9 -1.2,1.2 -2.9,-2 z m -10.2,33.8 0.6,1.9 1.1,0.3 1.3,-1.3 -0.5,3.8 1.1,1.6 1.3,-0.1 0.4,1.4 5.4,0.8 2.3,-0.4 2.6,-3 2,-1.2 -0.3,-0.5 2.6,-1.5 0.7,-3.4 1.7,-1.7 3.1,-1.9 2,-5.5 5.7,0.3 4.2,-2.3 3.3,-0.8 -0.5,-2 -1.7,-0.9 0.6,-1.7 3.3,-1.3 2.9,-2 4.2,-2 h 2.1 l 2.5,1.9 4.7,1.4 5.1,1.1 2.3,2.1 5.1,1.3 2.9,1.7 9.8,3.8 4.9,-0.9 0.8,1.2 2,0.8 0.9,-0.9 3.7,0.5 2.3,1 -0.7,1.8 4.6,-0.3 0.2,10.8 0.5,29.1 v 22.2 l -0.4,2.4 -1.6,2.1 -0.2,1.5 1.1,2.7 1,0.6 -0.9,36.6 -1.9,-1 -3.8,-4.1 -1.7,-2.9 -4.1,-3.8 -3.6,-2.8 -0.9,-1.7 1.2,-1.6 -1.9,1 -4.9,0.2 -1.9,0.8 -2.6,0.3 -1.2,-0.5 -0.9,-1.6 -2.2,0.9 -2.9,2.6 -1.2,-2.6 1.4,-0.9 -0.1,-2.5 1.3,-1 0.3,-1.8 1.4,-3.1 -2.2,-0.9 -1.1,-2.4 -3.2,-2.8 3.5,0.2 1.6,0.7 h 2.5 l -3.1,-1.3 -3.3,-0.8 -3.1,-2.8 0.2,-0.9 2.6,0.1 3.1,-0.8 3.1,2.1 -2,-2 -2.9,-0.7 -2.4,-1.9 0.6,-1 -4,-3.7 -1.2,-2.8 -0.4,-2.3 -1.5,-3.3 1.7,-0.5 -2.7,-0.5 -0.9,-0.8 3.4,-1.6 -2.2,0.1 -2.6,0.8 0.1,-5 -1.5,0.8 -1.1,-1.3 0.1,-1 -1.6,0.6 -1.9,-2.3 -2.1,-0.6 -1.9,-1.4 -0.9,0.1 -2,-2.5 -1,1.1 -4.3,-1.4 -0.1,-0.7 -2,0.9 -7.6,-3.9 h -1.4 l -3.7,-1.4 -1.1,-1 -3.9,-0.4 -4.7,-0.9 -3.2,0.6 -4.3,-2.2 -1.4,-1 6,-8 -16.1,-5.2 -0.1,-1.5 1.2,-1.9 1.8,-1.8 -0.1,-0.8 z" id="ID.PA" class="province" onmouseenter="showDetailsMap()" onmouseout="outMouseDetailsMap()">
+                                    <namespace:desc>
+                                        <namespace:labelrank>2</namespace:labelrank>
+                                        <namespace:hasc>ID.PA</namespace:hasc>
+                                        <namespace:alt-name>New Guinea|Yos Sudarso or Frederick Hendrik|Waigeo|Supiori Biak|Yapen|Misool|Salawati|Batanta</namespace:alt-name>
+                                        <namespace:woe-id>2345718</namespace:woe-id>
+                                        <namespace:subregion>NULL</namespace:subregion>
+                                        <namespace:fips>ID36</namespace:fips>
+                                        <namespace:postal-code>PA</namespace:postal-code>
+                                        <namespace:name>Papua</namespace:name>
+                                        <namespace:country>Indonesia</namespace:country>
+                                        <namespace:type-en>Province</namespace:type-en>
+                                        <namespace:region>NULL</namespace:region>
+                                        <namespace:longitude>138.689</namespace:longitude>
+                                        <namespace:woe-name>Papua</namespace:woe-name>
+                                        <namespace:latitude>-4.10825</namespace:latitude>
+                                        <namespace:woe-label>Papua, ID, Indonesia</namespace:woe-label>
+                                        <namespace:type>Propinsi</namespace:type>
+                                        <namespace:hc-middle-x>0.64</namespace:hc-middle-x>
+                                        <namespace:hc-middle-y>0.40</namespace:hc-middle-y>
+                                        <namespace:hc-key>id-pa</namespace:hc-key>
+                                        <namespace:hc-a2>PA</namespace:hc-a2>
+                                    </namespace:desc>
+                                </path>
+                                <path d="m 177.5,186.7 0.5,-2.3 0.8,-0.8 -1.2,-1.2 -0.5,-2.5 0.1,-2.3 0.5,-0.5 2.6,0.5 1.9,-0.3 -0.1,-1 2.5,1 0.7,-2.2 -0.1,-2.3 0.7,-2.5 1.6,0.8 3,-0.2 1.8,2.4 2.3,0.5 0.9,0.7 1.9,-0.8 4.2,1.7 1.6,-0.8 -0.1,-0.7 2.4,0.1 0.2,1.4 1.3,1.4 1.3,0.6 1.2,3.9 2.1,0.6 2.2,-0.1 -1.3,1.9 -0.1,1.8 -1.3,1.3 -1.7,0.4 -0.2,2.2 1.7,0.4 1.3,2.7 -0.1,1 1,0.8 -1.2,0.1 -0.6,0.9 -1.9,-0.3 -1.2,1.9 -1.8,0.1 -5.5,-0.8 -1.3,0.2 -0.9,-0.8 -1.8,-0.3 -1.5,-1.2 -2.7,-1 -2.9,0.1 -1.6,-0.4 -8.5,-0.1 -1.9,-0.3 -0.4,-1.9 2.2,-3 -0.1,-1.1 -1.3,-0.3 z" id="ID.JR" class="province" onmouseenter="showDetailsMap()" onmouseout="outMouseDetailsMap()">
+                                    <namespace:desc>
+                                        <namespace:labelrank>2</namespace:labelrank>
+                                        <namespace:hasc>ID.JR</namespace:hasc>
+                                        <namespace:alt-name>Jabar</namespace:alt-name>
+                                        <namespace:woe-id>2345715</namespace:woe-id>
+                                        <namespace:subregion>NULL</namespace:subregion>
+                                        <namespace:fips>ID30</namespace:fips>
+                                        <namespace:postal-code>JR</namespace:postal-code>
+                                        <namespace:name>Jawa Barat</namespace:name>
+                                        <namespace:country>Indonesia</namespace:country>
+                                        <namespace:type-en>Province</namespace:type-en>
+                                        <namespace:region>NULL</namespace:region>
+                                        <namespace:longitude>107.638</namespace:longitude>
+                                        <namespace:woe-name>Jawa Barat</namespace:woe-name>
+                                        <namespace:latitude>-6.90763</namespace:latitude>
+                                        <namespace:woe-label>West Java, ID, Indonesia</namespace:woe-label>
+                                        <namespace:type>Propinsi</namespace:type>
+                                        <namespace:hc-middle-x>0.50</namespace:hc-middle-x>
+                                        <namespace:hc-middle-y>0.50</namespace:hc-middle-y>
+                                        <namespace:hc-key>id-jr</namespace:hc-key>
+                                        <namespace:hc-a2>JR</namespace:hc-a2>
+                                    </namespace:desc>
+                                </path>
+                                <path d="m 134.4,158.9 1.8,-1.2 0.4,-0.6 1.3,0.7 0.6,1.1 h 2.9 l 1.8,-0.9 1.3,-0.1 0.5,-1.2 -1.1,-1.5 0.5,-1.2 -0.1,-2.8 3.1,-1.9 2.1,-0.5 2.4,-1.3 2,-0.6 1.9,-2 0.1,-1.5 2,-1.2 0.5,-2 3.1,1.5 1.1,1.3 0.4,1.3 1.7,1.4 h 1.7 v 2.1 l 1.5,2.4 -0.2,5.6 0.6,1.3 -0.5,1.5 0.2,3.2 -0.4,1.9 0.2,3.9 -0.5,2.6 -0.7,1.1 -0.3,-0.9 -1.7,-0.3 -1,-2.1 h -0.9 l -2.7,-2.6 -0.9,-0.1 -0.1,1.6 -0.8,0.3 0.7,2.6 -1.4,0.4 -5,-2.2 -1.3,-1.2 -1.3,-0.4 -1.3,1.1 2.6,3.5 0.5,1.6 -2.3,0.3 -0.4,-1.3 -2.4,-2 -1.3,-0.6 -0.7,-1.5 -2.3,-1.3 -1.9,-1.8 0.1,-0.8 -1.5,-0.5 0.1,-1.2 -1.9,-1.5 -2.1,-0.6 z" id="ID.1024" class="province" onmouseenter="showDetailsMap()" onmouseout="outMouseDetailsMap()">
+                                    <namespace:desc>
+                                        <namespace:labelrank>2</namespace:labelrank>
+                                        <namespace:hasc>ID.LA</namespace:hasc>
+                                        <namespace:alt-name>NULL</namespace:alt-name>
+                                        <namespace:woe-id>2345724</namespace:woe-id>
+                                        <namespace:subregion>NULL</namespace:subregion>
+                                        <namespace:fips>ID15</namespace:fips>
+                                        <namespace:postal-code>NULL</namespace:postal-code>
+                                        <namespace:name>Lampung</namespace:name>
+                                        <namespace:country>Indonesia</namespace:country>
+                                        <namespace:type-en>Province</namespace:type-en>
+                                        <namespace:region>NULL</namespace:region>
+                                        <namespace:longitude>105.059</namespace:longitude>
+                                        <namespace:woe-name>Lampung</namespace:woe-name>
+                                        <namespace:latitude>-4.919</namespace:latitude>
+                                        <namespace:woe-label>Lampung, ID, Indonesia</namespace:woe-label>
+                                        <namespace:type>Propinsi</namespace:type>
+                                        <namespace:hc-middle-x>0.63</namespace:hc-middle-x>
+                                        <namespace:hc-middle-y>0.55</namespace:hc-middle-y>
+                                        <namespace:hc-key>id-1024</namespace:hc-key>
+                                        <namespace:hc-a2>LA</namespace:hc-a2>
+                                    </namespace:desc>
+                                </path>
+                                <path d="m 181.4,172.7 0.4,0.6 3.4,-0.5 0.1,2.3 -0.7,2.2 -2.5,-1 -1,-1.3 -0.3,-1.6 z" id="ID.JK" class="province" onmouseenter="showDetailsMap()" onmouseout="outMouseDetailsMap()">
+                                    <namespace:desc>
+                                        <namespace:labelrank>9</namespace:labelrank>
+                                        <namespace:hasc>ID.JK</namespace:hasc>
+                                        <namespace:alt-name>Jawa|Djakarta</namespace:alt-name>
+                                        <namespace:woe-id>2345713</namespace:woe-id>
+                                        <namespace:subregion>NULL</namespace:subregion>
+                                        <namespace:fips>ID04</namespace:fips>
+                                        <namespace:postal-code>JK</namespace:postal-code>
+                                        <namespace:name>Jakarta Raya</namespace:name>
+                                        <namespace:country>Indonesia</namespace:country>
+                                        <namespace:type-en>Special district</namespace:type-en>
+                                        <namespace:region>NULL</namespace:region>
+                                        <namespace:longitude>106.837</namespace:longitude>
+                                        <namespace:woe-name>Jakarta Raya</namespace:woe-name>
+                                        <namespace:latitude>-6.22462</namespace:latitude>
+                                        <namespace:woe-label>DKI Jakarta, ID, Indonesia</namespace:woe-label>
+                                        <namespace:type>Daerah Khusus Ibukota</namespace:type>
+                                        <namespace:hc-middle-x>0.98</namespace:hc-middle-x>
+                                        <namespace:hc-middle-y>0.51</namespace:hc-middle-y>
+                                        <namespace:hc-key>id-jk</namespace:hc-key>
+                                        <namespace:hc-a2>JK</namespace:hc-a2>
+                                    </namespace:desc>
+                                </path>
+                                <path d="m 403.3,56.8 0.6,0.3 3.3,-0.4 2.5,0.7 3.5,2 1,-0.7 0.7,-1.6 1.9,0.4 1.7,1.3 0.7,1.5 3,1.7 1.1,2.6 -0.6,1.8 h -3.3 l -2.6,-2.7 -1.4,0.5 -4.8,0.3 -4.9,0.1 -2.4,0.5 -1.9,-0.1 -0.8,0.6 -2.7,0.4 -1.7,-1.3 -2.4,-0.1 -0.3,0.8 -2.6,0.5 v -1.7 l -1.2,-0.1 -1.5,-1.4 1.1,-0.6 0.9,-1.6 1.1,-0.5 1.9,0.1 4.9,-2.1 2.3,0.4 z" id="ID.GO" class="province" onmouseenter="showDetailsMap()" onmouseout="outMouseDetailsMap()">
+                                    <namespace:desc>
+                                        <namespace:labelrank>7</namespace:labelrank>
+                                        <namespace:hasc>ID.GO</namespace:hasc>
+                                        <namespace:alt-name>NULL</namespace:alt-name>
+                                        <namespace:woe-id>2345732</namespace:woe-id>
+                                        <namespace:subregion>NULL</namespace:subregion>
+                                        <namespace:fips>ID34</namespace:fips>
+                                        <namespace:postal-code>GO</namespace:postal-code>
+                                        <namespace:name>Gorontalo</namespace:name>
+                                        <namespace:country>Indonesia</namespace:country>
+                                        <namespace:type-en>Province</namespace:type-en>
+                                        <namespace:region>NULL</namespace:region>
+                                        <namespace:longitude>122.331</namespace:longitude>
+                                        <namespace:woe-name>Gorontalo</namespace:woe-name>
+                                        <namespace:latitude>0.760501</namespace:latitude>
+                                        <namespace:woe-label>Gorontalo, ID, Indonesia</namespace:woe-label>
+                                        <namespace:type>Propinsi</namespace:type>
+                                        <namespace:hc-middle-x>0.50</namespace:hc-middle-x>
+                                        <namespace:hc-middle-y>0.43</namespace:hc-middle-y>
+                                        <namespace:hc-key>id-go</namespace:hc-key>
+                                        <namespace:hc-a2>GO</namespace:hc-a2>
+                                    </namespace:desc>
+                                </path>
+                                <path d="m 243.3,200.4 -2.2,-0.2 -3.2,-0.8 -6.5,-2.9 1.2,-3.1 1.8,0.4 2.5,-2.4 1.2,3.2 2.7,0.4 1.4,0.7 0.4,3.6 z" id="ID.YO" class="province" onmouseenter="showDetailsMap()" onmouseout="outMouseDetailsMap()">
+                                    <namespace:desc>
+                                        <namespace:labelrank>7</namespace:labelrank>
+                                        <namespace:hasc>ID.YO</namespace:hasc>
+                                        <namespace:alt-name>Jawa|Daerah Istimewa Yogyakarta</namespace:alt-name>
+                                        <namespace:woe-id>2345719</namespace:woe-id>
+                                        <namespace:subregion>NULL</namespace:subregion>
+                                        <namespace:fips>ID10</namespace:fips>
+                                        <namespace:postal-code>YO</namespace:postal-code>
+                                        <namespace:name>Yogyakarta</namespace:name>
+                                        <namespace:country>Indonesia</namespace:country>
+                                        <namespace:type-en>Special region</namespace:type-en>
+                                        <namespace:region>NULL</namespace:region>
+                                        <namespace:longitude>110.443</namespace:longitude>
+                                        <namespace:woe-name>Yogyakarta</namespace:woe-name>
+                                        <namespace:latitude>-7.83533</namespace:latitude>
+                                        <namespace:woe-label>Special Region of Yogyakarta, ID, Indonesia</namespace:woe-label>
+                                        <namespace:type>Daerah Istimewa</namespace:type>
+                                        <namespace:hc-middle-x>0.35</namespace:hc-middle-x>
+                                        <namespace:hc-middle-y>0.62</namespace:hc-middle-y>
+                                        <namespace:hc-key>id-yo</namespace:hc-key>
+                                        <namespace:hc-a2>YO</namespace:hc-a2>
+                                    </namespace:desc>
+                                </path>
+                                <path d="m 290.3,128.2 -0.7,-0.5 1.3,-2.8 -1.6,2.3 -1.8,0.2 -0.1,-2.2 -1.1,2.1 -2.2,1.2 -2.5,0.7 -1.2,-0.1 v -2.4 l -0.4,-1.6 -2.3,0.1 -1.6,1.4 -1.7,-1.3 -0.9,-1.4 -1.2,-0.5 -1.1,-1.7 -0.2,1.7 -0.9,1.3 1.1,0.5 -5.7,4.1 -1.4,0.3 -2,-1.3 -1.3,-0.3 -2.7,1.1 -3,3 -1.2,-0.4 0.2,-2.7 -0.6,-2.4 0.2,-1.9 -1.6,-3.6 -0.9,1.3 0.5,0.7 -1.7,1 -2.1,-1.1 -2.2,0.3 -3.3,2 -2.3,0.4 -2.3,-0.7 0.7,-1 2.2,-1.2 1.5,-1.9 1,-0.5 -0.2,-4.8 -2.1,-3.9 -0.3,-2.1 0.3,-3.5 -0.3,-1.2 -1.4,-0.6 1.2,-1.4 h 1.8 l 2.8,-2.5 1.2,-1.5 2.3,-1.4 0.9,-2.5 6.7,-4.5 3.8,0.1 2.9,-0.9 6.1,-3 2.3,-0.8 1.4,1.1 0.6,-1.9 -0.8,-0.9 1,-1.7 1.5,-0.9 0.6,-2.1 -0.4,-1.7 -2.1,-2.5 1.4,-0.5 1.7,0.1 1.3,-0.8 0.2,-1.4 1.8,-2.3 2.8,-0.8 1,-0.7 2.1,-0.2 2.9,0.8 4.2,-0.7 1,-0.8 3.5,-1.1 1.3,1.4 0.3,1.5 -1.4,2.5 -0.2,1.2 1.1,3.2 -0.6,2.3 0.6,1.2 2.6,-2.8 2.3,-0.1 -0.8,3.3 v 1.3 l 1,2.9 0.8,1 0.6,2.8 0.8,1.6 2.5,1.2 1.7,1.7 1,-0.3 0.1,3.1 -1.1,2 h -0.6 v -1 l -3.7,1.3 -1.1,4.9 0.4,2 -0.3,2 -2.8,2.6 -3.3,1 0.2,2.3 -1.2,2.1 -0.4,1.9 -2.2,2.1 -1.8,0.9 -0.4,1.8 z" id="ID.KT" class="province" onmouseenter="showDetailsMap()" onmouseout="outMouseDetailsMap()">
+                                    <namespace:desc>
+                                        <namespace:labelrank>2</namespace:labelrank>
+                                        <namespace:hasc>ID.KT</namespace:hasc>
+                                        <namespace:alt-name>Kalteng</namespace:alt-name>
+                                        <namespace:woe-id>2345722</namespace:woe-id>
+                                        <namespace:subregion>NULL</namespace:subregion>
+                                        <namespace:fips>ID13</namespace:fips>
+                                        <namespace:postal-code>KT</namespace:postal-code>
+                                        <namespace:name>Kalimantan Tengah</namespace:name>
+                                        <namespace:country>Indonesia</namespace:country>
+                                        <namespace:type-en>Province</namespace:type-en>
+                                        <namespace:region>NULL</namespace:region>
+                                        <namespace:longitude>113.286</namespace:longitude>
+                                        <namespace:woe-name>Kalimantan Tengah</namespace:woe-name>
+                                        <namespace:latitude>-1.84217</namespace:latitude>
+                                        <namespace:woe-label>Central Kalimantan, ID, Indonesia</namespace:woe-label>
+                                        <namespace:type>Propinsi</namespace:type>
+                                        <namespace:hc-middle-x>0.59</namespace:hc-middle-x>
+                                        <namespace:hc-middle-y>0.51</namespace:hc-middle-y>
+                                        <namespace:hc-key>id-kt</namespace:hc-key>
+                                        <namespace:hc-a2>KT</namespace:hc-a2>
+                                    </namespace:desc>
+                                </path>
+                                <path d="m 145.2,111.2 -0.6,2.2 0.8,-0.4 1.5,0.9 0.9,1.7 1.2,-0.7 1.5,1.1 0.1,1.2 -1.8,2.7 -0.3,3.5 0.8,-2.2 1.5,-2.2 0.8,1.3 1,-0.7 1.8,0.6 1.2,-0.6 6.3,0.5 -0.1,2.2 1,1.6 1.6,0.3 0.4,2.5 1.3,1.2 2,0.2 0.7,1.1 0.4,3 -2,1.8 -0.6,1.3 -0.7,3.3 2.1,2.2 -1.1,2.6 -0.5,2.3 h -1.7 l -1.7,-1.4 -0.4,-1.3 -1.1,-1.3 -3.1,-1.5 -0.5,2 -2,1.2 -0.1,1.5 -1.9,2 -2,0.6 -2.4,1.3 -2.1,0.5 -3.1,1.9 0.1,2.8 -0.5,1.2 1.1,1.5 -0.5,1.2 -1.3,0.1 -1.8,0.9 h -2.9 l -0.6,-1.1 -1.3,-0.7 -2.4,-4.3 -0.2,-1.2 -6.5,-2.2 -0.9,-2.9 h -2.4 l -3.2,-0.9 -2.2,-2 1,-0.4 2.8,-2.6 -0.3,-0.8 h 1.7 l 0.2,-1.4 -0.7,-1.3 -1.5,-0.2 -1.7,-1.4 -1.9,1.6 -2.6,-1.7 0.3,-1.5 -0.9,-0.9 -2.9,-0.2 -0.3,-1.6 -2.5,-2.4 2.4,-1.6 0.3,-0.7 2.9,1.2 2.2,-0.4 2.8,-2.3 0.9,-1.6 -0.1,-1.6 3.9,0.4 1.2,-0.6 -0.6,-1.1 0.6,-1.5 1.4,1.4 2.4,1.6 -0.1,-2.5 1.3,-0.6 -0.5,-1.1 0.1,-2.3 5.1,-2.9 3.5,0.4 2.9,-0.6 1.5,-1.7 z" id="ID.SL" class="province" onmouseenter="showDetailsMap()" onmouseout="outMouseDetailsMap()">
+                                    <namespace:desc>
+                                        <namespace:labelrank>2</namespace:labelrank>
+                                        <namespace:hasc>ID.SL</namespace:hasc>
+                                        <namespace:alt-name>Sumsel</namespace:alt-name>
+                                        <namespace:woe-id>2345734</namespace:woe-id>
+                                        <namespace:subregion>NULL</namespace:subregion>
+                                        <namespace:fips>ID32</namespace:fips>
+                                        <namespace:postal-code>SL</namespace:postal-code>
+                                        <namespace:name>Sumatera Selatan</namespace:name>
+                                        <namespace:country>Indonesia</namespace:country>
+                                        <namespace:type-en>Province</namespace:type-en>
+                                        <namespace:region>NULL</namespace:region>
+                                        <namespace:longitude>104.073</namespace:longitude>
+                                        <namespace:woe-name>Sumatera Selatan</namespace:woe-name>
+                                        <namespace:latitude>-3.3824</namespace:latitude>
+                                        <namespace:woe-label>South Sumatra, ID, Indonesia</namespace:woe-label>
+                                        <namespace:type>Propinsi</namespace:type>
+                                        <namespace:hc-middle-x>0.54</namespace:hc-middle-x>
+                                        <namespace:hc-middle-y>0.48</namespace:hc-middle-y>
+                                        <namespace:hc-key>id-sl</namespace:hc-key>
+                                        <namespace:hc-a2>SL</namespace:hc-a2>
+                                    </namespace:desc>
+                                </path>
+                                <path d="m 366.5,125.4 -2.9,-0.8 -1.3,1 -2.6,0.4 -1.5,0.9 -1.4,-3.1 0.1,-0.8 -1.4,-3 1.3,-0.6 0.3,-2.8 -1.6,0.1 -0.3,-1.3 0.8,-2.3 1.4,0.3 1.4,-1.1 1.8,-2.1 -0.3,-3.4 1.1,-2.9 1.8,-0.7 0.3,-2.1 -0.9,-1.9 0.2,-1.8 -0.6,-2.7 0.4,-0.5 -0.1,-2.1 1.8,-1.8 0.9,-3.6 0.5,-0.4 0.3,3.2 0.5,1.4 -1.6,2.2 0.1,0.6 2.3,0.8 0.8,0.9 0.6,2.2 1.9,2.6 -0.3,1.2 0.8,1.2 -0.6,1.4 -2.6,2 -0.3,1.7 1.3,0.9 0.6,3 0.8,1.9 -1.8,1 -2.1,0.1 0.5,2.2 1.5,3.1 -3.1,1.2 z" id="ID.SR" class="province" onmouseenter="showDetailsMap()" onmouseout="outMouseDetailsMap()">
+                                    <namespace:desc>
+                                        <namespace:labelrank>2</namespace:labelrank>
+                                        <namespace:hasc>ID.SR</namespace:hasc>
+                                        <namespace:alt-name>Sulsel</namespace:alt-name>
+                                        <namespace:woe-id>28350155</namespace:woe-id>
+                                        <namespace:subregion>NULL</namespace:subregion>
+                                        <namespace:fips>ID41</namespace:fips>
+                                        <namespace:postal-code>SR</namespace:postal-code>
+                                        <namespace:name>Sulawesi Barat</namespace:name>
+                                        <namespace:country>Indonesia</namespace:country>
+                                        <namespace:type-en>Province</namespace:type-en>
+                                        <namespace:region>NULL</namespace:region>
+                                        <namespace:longitude>119.316</namespace:longitude>
+                                        <namespace:woe-name>Sulawesi Barat</namespace:woe-name>
+                                        <namespace:latitude>-2.69615</namespace:latitude>
+                                        <namespace:woe-label>West Sulawesi, ID, Indonesia</namespace:woe-label>
+                                        <namespace:type>Propinsi</namespace:type>
+                                        <namespace:hc-middle-x>0.50</namespace:hc-middle-x>
+                                        <namespace:hc-middle-y>0.67</namespace:hc-middle-y>
+                                        <namespace:hc-key>id-sr</namespace:hc-key>
+                                        <namespace:hc-a2>SR</namespace:hc-a2>
+                                    </namespace:desc>
+                                </path>
+                                <path d="m 128.1,97.5 0.1,1 1,-0.2 2.2,2 2.9,1.1 1.7,-0.9 3.9,1.2 2.4,-0.7 0.4,2.3 0.8,1.6 0.4,3.4 1.3,2.9 -1.6,-0.5 -1.5,1.7 -2.9,0.6 -3.5,-0.4 -5.1,2.9 -0.1,2.3 0.5,1.1 -1.3,0.6 0.1,2.5 -2.4,-1.6 -1.4,-1.4 -0.6,1.5 0.6,1.1 -1.2,0.6 -3.9,-0.4 0.1,1.6 -0.9,1.6 -2.8,2.3 -2.2,0.4 -2.9,-1.2 -0.3,0.7 -2.4,1.6 -2.6,-0.4 -2.5,-1.4 -2.7,-2.6 -0.9,-2.1 -1.2,-1 -1.5,1 -1.3,-3.1 -1.9,-2.3 -0.6,-3.2 1.7,0.2 3.3,-0.3 3.2,-3.4 -0.1,-3.2 1.7,-0.8 0.6,-1.1 -0.9,-0.5 -0.3,-1.4 1.7,-0.6 1.8,-1.9 2.6,-0.5 1.1,0.3 1.5,1.8 2.9,1 1.9,-2.8 1.7,-1.8 1.7,-0.5 h 2.7 z" id="ID.JA" class="province" onmouseenter="showDetailsMap()" onmouseout="outMouseDetailsMap()">
+                                    <namespace:desc>
+                                        <namespace:labelrank>6</namespace:labelrank>
+                                        <namespace:hasc>ID.JA</namespace:hasc>
+                                        <namespace:alt-name>Djambi</namespace:alt-name>
+                                        <namespace:woe-id>2345714</namespace:woe-id>
+                                        <namespace:subregion>NULL</namespace:subregion>
+                                        <namespace:fips>ID05</namespace:fips>
+                                        <namespace:postal-code>JA</namespace:postal-code>
+                                        <namespace:name>Jambi</namespace:name>
+                                        <namespace:country>Indonesia</namespace:country>
+                                        <namespace:type-en>Province</namespace:type-en>
+                                        <namespace:region>NULL</namespace:region>
+                                        <namespace:longitude>102.823</namespace:longitude>
+                                        <namespace:woe-name>Jambi</namespace:woe-name>
+                                        <namespace:latitude>-1.65497</namespace:latitude>
+                                        <namespace:woe-label>Jambi, ID, Indonesia</namespace:woe-label>
+                                        <namespace:type>Propinsi</namespace:type>
+                                        <namespace:hc-middle-x>0.51</namespace:hc-middle-x>
+                                        <namespace:hc-middle-y>0.48</namespace:hc-middle-y>
+                                        <namespace:hc-key>id-ja</namespace:hc-key>
+                                        <namespace:hc-a2>JA</namespace:hc-a2>
+                                    </namespace:desc>
+                                </path>
+                            </g>
+                        </svg>
+                        <!-- end maps -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- boostrap script -->
+    <script src="vendor/jquery/jquery-3.3.1.slim.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap-4.3.1/js/bootstrap.min.js"></script>
+    <!-- chartjs -->
+    <script src="vendor/chartjs/Chart.min.js"></script>
+    <!-- leafjet js maps -->
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og==" crossorigin=""></script>
+    <!-- <script src="indo-stats.js"></script> -->
+    <script src="js/random.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
